@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="ru">
+    <head>
+        <meta charset="utf-8">
+        <title>Седона - отели</title>
+    </head>
+    <body>
+		<header class="page-header">
+			<nav class="main-navigation">
+				<a class="main-header-logo">
+					<img src="http://placehold.it/200x200" width="200" height="200" alt='Логотип сайта Седона'>
+				</a>
+				<ul class="site-navigation">
+					<li><a href="info.html">Информация</a></li>
+					<li><a href="assets.html">Фото и видео</a></li>
+					<li><a href="map.html">Карта штата</a></li>
+					<li><a href="hotels.html">Гостиницы</a></li>
+				</ul>
+			</nav>
+		</header>
+		<main class="container">
+			<h1 class="visually-hidden">Седона - отели</h1>
+			<section class="hotels-filter">
+				<form action="https://echo.htmlacademy.ru" method="POST" class="hotels-filter-form">
+					<fieldset class="hotels-filter-item">
+						<p class="search-form-item left-align">
+							Инфраструктура:
+							<input type="checkbox" name="isPoolRequired" class="checkbox">
+							<input type="checkbox" name="isParkingRequired" class="checkbox">
+							<input type="checkbox" name="isWifiRequired" class="checkbox">
+						</p>
+					</fieldset>
+					<fieldset class="hotels-filter-item left-align">
+						<p class="search-form-item">
+							Тип жилья:
+							<input type="checkbox" name="isHotelRequired" class="checkbox">
+							<input type="checkbox" name="isMotelRequired" class="checkbox">
+							<input type="checkbox" name="isAppartmentsRequired" class="checkbox">
+						</p>
+					</fieldset>
+					<fieldset class="hotels-filter-item price-filters right-align">
+						<p class="search-form-item">
+							Стоимость в сутки (р):
+							<input type="number" name="minPrice" class="checkbox">
+							<input type="number" name="maxPrice" class="checkbox">
+							<div class="price-slider" />
+							<button class="button" type="submit">Показать</button>
+						</p>
+					</fieldset>
+				</form>
+			</section>
+			<section class="hotels-sorting">
+				<p class="total">
+					Найдено <span class="total-counter">3</span>
+				</p>
+				<form action="https://echo.htmlacademy.ru" method="POST" class="hotels-sorting-form">
+					Сортировка
+					<button name="price" class="sort-button" type="submit">По цене</button>
+					<button name="type" class="sort-button" type="submit">По типу</button>
+					<button name="raiting" class="sort-button" type="submit">По рейтингу</button>
+				</form>
+			</section>
+			<section class="hotels-result">
+				<ul>
+					<li class="hotels-result-item">
+						
+					</li>
+					<li class="hotels-result-item">
+
+					</li>
+					<li class="hotels-result-item">
+
+					</li>
+				</ul>
+			</section>
+		</main>
+		<footer class="page-footer">
+			<p class="footer-tag">
+				#VISITSEDONA
+			</p>
+			
+			<div class="footer-social">
+				<ul>
+					<li>
+						<a href="#" class="social-button">Твиттер</a>
+					</li>
+					<li>
+						<a href="#" class="social-button">Фейсбук</a>
+					</li>
+					<li>
+						<a href="#" class="social-button">YouTube</a>
+					</li>
+				</ul>
+			</div>
+
+			<p class="footer-copyright">
+				<b>Website by</b>
+				<a class="button" href="https://htmlacademy.ru">
+					<img src="http://placehold.it/20x40" width="20" height="40" alt='HTML Academy'>                 
+				</a>
+			</p>
+		</footer>
+	</body>
+</html>
