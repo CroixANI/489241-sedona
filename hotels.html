@@ -21,7 +21,7 @@
 		<main class="container">
 			<h1 class="visually-hidden">Седона - отели</h1>
 			<section class="hotels-filter">
-				<form action="https://echo.htmlacademy.ru" method="POST" class="hotels-filter-form">
+				<form action="https://echo.htmlacademy.ru" method="GET" class="hotels-filter-form">
 					<fieldset class="hotels-filter-item">
 						<p class="search-form-item left-align">
 							Инфраструктура:
@@ -53,7 +53,12 @@
 				<p class="total">
 					Найдено <span class="total-counter">3</span>
 				</p>
-				<form action="https://echo.htmlacademy.ru" method="POST" class="hotels-sorting-form">
+				<!-- 
+					TODO: Ask what is correct:
+					1. Either GET or POST should be used? GET looks more correct to make sure that user will be able to save link with filters.
+					2. How both GET forms will work together e.g. Sort Form and Search Form.
+				-->
+				<form action="https://echo.htmlacademy.ru" method="GET" class="hotels-sorting-form">
 					Сортировка
 					<button name="price" class="sort-button" type="submit">По цене</button>
 					<button name="type" class="sort-button" type="submit">По типу</button>
@@ -63,13 +68,55 @@
 			<section class="hotels-result">
 				<ul>
 					<li class="hotels-result-item">
-						
+						<!-- 
+							TODO: Ask what is correct:
+							1. To use buttons or Anchor for Details and Order button
+							2. How to split row into columns like in design.
+							3. How to implement stars raiting.
+						--> 
+						<h2>Amara Resort &and; SPA</h2>
+						<img src="http://placehold.it/400x200" width="400" height="200" alt='Отель Amara Resort &and; SPA'>
+						<p class="hotels-result-item-type">Гостиница</p>
+						<p class="hotels-result-item-price">ОТ 4000р</p>
+						<a href="hotel-details.html" class="button button-blue">Подробнее</a>
+						<a href="hotel-order.html" class="button button-brown">Забронировать</a>
+						<!-- Took example from https://css-tricks.com/star-ratings/ and not sure if it is the best one -->
+						<div class="rating raiting-5">
+							<span>☆</span><span>☆</span><span>☆</span><span>☆</span><span>☆</span>
+						</div>
+						<p class="raiting-info">
+							Рейтинг: 8,5
+						</p>
 					</li>
 					<li class="hotels-result-item">
-
+						<h2>Desert Quail Inn</h2>
+						<img src="http://placehold.it/400x200" width="400" height="200" alt='Отель Desert Quail Inn'>
+						<p class="hotels-result-item-type">Мотель</p>
+						<p class="hotels-result-item-price">ОТ 3000р</p>
+						<a href="hotel-details.html" class="button button-blue">Подробнее</a>
+						<a href="hotel-order.html" class="button button-brown">Забронировать</a>
+						<!-- Took example from https://css-tricks.com/star-ratings/ and not sure if it is the best one -->
+						<div class="rating raiting-3">
+							<span>☆</span><span>☆</span><span>☆</span><span>☆</span><span>☆</span>
+						</div>
+						<p class="raiting-info">
+							Рейтинг: 8,9
+						</p>
 					</li>
 					<li class="hotels-result-item">
-
+						<h2>Villas Poco Diablo</h2>
+						<img src="http://placehold.it/400x200" width="400" height="200" alt='Отель Villas Poco Diablo'>
+						<p class="hotels-result-item-type">Апартаменты</p>
+						<p class="hotels-result-item-price">ОТ 2000р</p>
+						<a href="hotel-details.html" class="button button-blue">Подробнее</a>
+						<a href="hotel-order.html" class="button button-brown">Забронировать</a>
+						<!-- Took example from https://css-tricks.com/star-ratings/ and not sure if it is the best one -->
+						<div class="rating raiting-2">
+							<span>☆</span><span>☆</span><span>☆</span><span>☆</span><span>☆</span>
+						</div>
+						<p class="raiting-info">
+							Рейтинг: 9,2
+						</p>
 					</li>
 				</ul>
 			</section>
