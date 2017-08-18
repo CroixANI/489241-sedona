@@ -7,12 +7,14 @@
     <body>
         <header class="page-header">
             <nav class="main-navigation">
-                <a class="main-header-logo">
-                    <img src="http://placehold.it/200x200" width="200" height="200" alt='Логотип сайта Седона'>
-                </a>
                 <ul class="site-navigation">
                     <li><a href="info.html">Информация</a></li>
                     <li><a href="assets.html">Фото и видео</a></li>
+                    <li>
+                        <a class="main-header-logo">
+                            <img src="http://placehold.it/200x200" width="200" height="200" alt='Логотип сайта Седона'>
+                        </a>
+                    </li>
                     <li><a href="map.html">Карта штата</a></li>
                     <li><a href="hotels.html">Гостиницы</a></li>
                 </ul>
@@ -23,6 +25,7 @@
                 <h1>Sedona</h1>
                 <p>Седона - небольшой городок в Аризоне, заслуживающий большего!</p>
                 <p>Рассмотрим 5 причин, по которым Седона круче, чем Гранд Каньон!</p>
+                <img src="http://placehold.it/1200x500" width="1200" height="500" alt='Добро пожаловать в Седона'>
             </section>
             <section class="feature feature-left-image">
                 <h2>Настоящий городок</h2>
@@ -33,20 +36,18 @@
                 </a>
             </section>
             <section class="recommendations">
-                <ul>
-                    <li class="recommendations-item">
-                        <h3>Жилье</h3>
-                        <p>Рекомендуем пожить в настоящем мотеле, все как в кино!</p>
-                    </li>
-                    <li class="recommendations-item">
-                        <h3>Еда</h3>
-                        <p>Всегда заказывайте фирменный бургер, вы не разочаруетесь!</p>
-                    </li>
-                    <li class="recommendations-item">
-                        <h3>Сувениры</h3>
-                        <p>Не только китайского, но и местного производства!</p>
-                    </li>
-                </ul>
+                <div class="recommendations-item">
+                    <h3>Жилье</h3>
+                    <p>Рекомендуем пожить в настоящем мотеле, все как в кино!</p>
+                </div>
+                <div class="recommendations-item">
+                    <h3>Еда</h3>
+                    <p>Всегда заказывайте фирменный бургер, вы не разочаруетесь!</p>
+                </div>
+                <div class="recommendations-item">
+                    <h3>Сувениры</h3>
+                    <p>Не только китайского, но и местного производства!</p>
+                </div>
             </section>
             <section class="feature feature-right-image">
                 <h2>Там есть мост Дьявола</h2>
@@ -57,37 +58,27 @@
                 </a>
             </section>
             <section class="features-list">
-                <ul>
-                    <li class="features-item">
-                        <!-- 
-                            TODO: Ask about headers (h1..h3) on this page.
-                            Looks like h3 should be here h2, but not sure.
-                        -->
-                        <h3>Небольшая площадь</h3>
-                        <p>— №3 —</p>
-                        <p>Все достопримечательности находятся очень близко</p>
-                    </li>
-                    <li class="features-item">
-                        <h3>Красивая дорога</h3>
-                        <p>— №4 —</p>
-                        <p>Ехать в Седону из Лас-Вегаса совсем не скучно!</p>
-                    </li>
-                    <li class="features-item">
-                        <h3>Мало туристов</h3>
-                        <p>— №5 —</p>
-                        <p>Большинство едет в гранд каньон и толпится там</p>
-                    </li>
-                </ul>
+                <div class="features-item">
+                    <h3>Небольшая площадь</h3>
+                    <p>— №3 —</p>
+                    <p>Все достопримечательности находятся очень близко</p>
+                </div>
+                <div class="features-item">
+                    <h3>Красивая дорога</h3>
+                    <p>— №4 —</p>
+                    <p>Ехать в Седону из Лас-Вегаса совсем не скучно!</p>
+                </div>
+                <div class="features-item">
+                    <h3>Мало туристов</h3>
+                    <p>— №5 —</p>
+                    <p>Большинство едет в гранд каньон и толпится там</p>
+                </div>
             </section>
             <section class="hotels-search">
                 <h2>Заинтересовались?</h2>
                 <p>Укажите предполагаемые даты поездки.</p>
                 <p>И мы покажем вам лучшие предложения гостиниц в Седона</p>
                 <form action="https://echo.htmlacademy.ru" method="POST" class="search-form">
-                    <!-- 
-                        TODO: Ask about definition lists (DL,DD,DT) tags for HTML forms.
-                        Saw few examples with them. What and when to use?
-                    -->
                     <p class="search-form-item">
                         Дата заезда
                         <input type="text" name="startDate" placeholder="24 апреля 2017" class="calendar-icon">

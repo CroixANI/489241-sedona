@@ -7,12 +7,14 @@
     <body>
 		<header class="page-header">
 			<nav class="main-navigation">
-				<a class="main-header-logo">
-					<img src="http://placehold.it/200x200" width="200" height="200" alt='Логотип сайта Седона'>
-				</a>
 				<ul class="site-navigation">
 					<li><a href="info.html">Информация</a></li>
 					<li><a href="assets.html">Фото и видео</a></li>
+					<li>
+                        <a class="main-header-logo">
+                            <img src="http://placehold.it/200x200" width="200" height="200" alt='Логотип сайта Седона'>
+                        </a>
+                    </li>
 					<li><a href="map.html">Карта штата</a></li>
 					<li><a href="hotels.html">Гостиницы</a></li>
 				</ul>
@@ -27,16 +29,26 @@
 						<p class="search-form-item left-align">
 							Инфраструктура: 
 							<input type="checkbox" name="isPoolRequired" class="checkbox">
+							<label for="isPoolRequired">Бассейн</label>
+
 							<input type="checkbox" name="isParkingRequired" class="checkbox">
+							<label for="isParkingRequired">Парковка</label>
+
 							<input type="checkbox" name="isWifiRequired" class="checkbox">
+							<label for="isWifiRequired">Wi-Fi</label>
 						</p>
 					</fieldset>
 					<fieldset class="hotels-filter-item left-align">
 						<p class="search-form-item">
 							Тип жилья:
 							<input type="checkbox" name="isHotelRequired" class="checkbox">
+							<label for="isWifiRequired">Гостиница</label>
+
 							<input type="checkbox" name="isMotelRequired" class="checkbox">
+							<label for="isWifiRequired">Мотель</label>
+
 							<input type="checkbox" name="isApartmentsRequired" class="checkbox">
+							<label for="isWifiRequired">Апартаменты</label>
 						</p>
 					</fieldset>
 					<fieldset class="hotels-filter-item price-filters right-align">
@@ -65,6 +77,9 @@
 					<button name="price" class="sort-button" type="submit">По цене</button>
 					<button name="type" class="sort-button" type="submit">По типу</button>
 					<button name="rating" class="sort-button" type="submit">По рейтингу</button>
+
+					<button name="ascending" class="sort-button up-arrow-button" type="submit">По возрастанию</button>
+					<button name="descending" class="sort-button down-arrow-button" type="submit">По убыванию</button>
 				</form>
 			</section>
 			<section class="hotels-result">
@@ -82,10 +97,14 @@
 						<p class="hotels-result-item-price">ОТ 4000р</p>
 						<a href="hotel-details.html" class="button button-blue">Подробнее</a>
 						<a href="hotel-order.html" class="button button-brown">Забронировать</a>
-						<!-- Took example from https://css-tricks.com/star-ratings/ and not sure if it is the best one -->
-						<div class="rating rating-5">
-							<span>☆</span><span>☆</span><span>☆</span><span>☆</span><span>☆</span>
-						</div>
+						
+						<ul class="rating rating-5">
+							<li>☆</li>
+							<li>☆</li>
+							<li>☆</li>
+							<li>☆</li>
+							<li>☆</li>
+						</ul>
 						<p class="rating-info">
 							Рейтинг: 8,5
 						</p>
