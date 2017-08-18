@@ -42,20 +42,20 @@
 						<p class="search-form-item">
 							Тип жилья:
 							<input type="checkbox" name="isHotelRequired" class="checkbox">
-							<label for="isWifiRequired">Гостиница</label>
+							<label for="isHotelRequired">Гостиница</label>
 
 							<input type="checkbox" name="isMotelRequired" class="checkbox">
-							<label for="isWifiRequired">Мотель</label>
+							<label for="isMotelRequired">Мотель</label>
 
 							<input type="checkbox" name="isApartmentsRequired" class="checkbox">
-							<label for="isWifiRequired">Апартаменты</label>
+							<label for="isApartmentsRequired">Апартаменты</label>
 						</p>
 					</fieldset>
 					<fieldset class="hotels-filter-item price-filters right-align">
 						<p class="search-form-item">
 							Стоимость в сутки (р):
-							<input type="number" name="minPrice" class="checkbox">
-							<input type="number" name="maxPrice" class="checkbox">
+							<input type="number" name="minPrice" class="checkbox" min="0">
+							<input type="number" name="maxPrice" class="checkbox" min="0">
 							<div class="price-slider"></div>
 							<button class="button" type="submit">Показать</button>
 						</p>
