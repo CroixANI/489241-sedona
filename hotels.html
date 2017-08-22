@@ -67,11 +67,6 @@
 				<p class="total">
 					Найдено <span class="total-counter">3</span>
 				</p>
-				<!-- 
-					TODO: Ask what is correct:
-					1. Either GET or POST should be used? GET looks more correct to make sure that user will be able to save link with filters.
-					2. How both GET forms will work together e.g. Sort Form and Search Form.
-				-->
 				<form action="https://echo.htmlacademy.ru" method="GET" class="hotels-sorting-form">
 					Сортировка
 					<button name="price" class="sort-button" type="submit">По цене</button>
@@ -85,19 +80,12 @@
 			<section class="hotels-result">
 				<ul>
 					<li class="hotels-result-item">
-						<!-- 
-							TODO: Ask what is correct:
-							1. To use buttons or Anchor for Details and Order button
-							2. How to split row into columns like in design.
-							3. How to implement stars rating.
-						--> 
 						<h2>Amara Resort &and; SPA</h2>
 						<img src="http://placehold.it/400x200" width="400" height="200" alt='Отель Amara Resort &and; SPA'>
 						<p class="hotels-result-item-type">Гостиница</p>
 						<p class="hotels-result-item-price">ОТ 4000р</p>
 						<a href="hotel-details.html" class="button button-blue">Подробнее</a>
 						<a href="hotel-order.html" class="button button-brown">Забронировать</a>
-						
 						<ul class="rating rating-5">
 							<li>☆</li>
 							<li>☆</li>
@@ -116,10 +104,13 @@
 						<p class="hotels-result-item-price">ОТ 3000р</p>
 						<a href="hotel-details.html" class="button button-blue">Подробнее</a>
 						<a href="hotel-order.html" class="button button-brown">Забронировать</a>
-						<!-- Took example from https://css-tricks.com/star-ratings/ and not sure if it is the best one -->
-						<div class="rating rating-3">
-							<span>☆</span><span>☆</span><span>☆</span><span>☆</span><span>☆</span>
-						</div>
+						<ul class="rating rating-3">
+								<li>☆</li>
+								<li>☆</li>
+								<li>☆</li>
+								<li>☆</li>
+								<li>☆</li>
+							</ul>
 						<p class="rating-info">
 							Рейтинг: 8,9
 						</p>
@@ -131,10 +122,13 @@
 						<p class="hotels-result-item-price">ОТ 2000р</p>
 						<a href="hotel-details.html" class="button button-blue">Подробнее</a>
 						<a href="hotel-order.html" class="button button-brown">Забронировать</a>
-						<!-- Took example from https://css-tricks.com/star-ratings/ and not sure if it is the best one -->
-						<div class="rating rating-2">
-							<span>☆</span><span>☆</span><span>☆</span><span>☆</span><span>☆</span>
-						</div>
+						<ul class="rating rating-2">
+							<li>☆</li>
+							<li>☆</li>
+							<li>☆</li>
+							<li>☆</li>
+							<li>☆</li>
+						</ul>
 						<p class="rating-info">
 							Рейтинг: 9,2
 						</p>

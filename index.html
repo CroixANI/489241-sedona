@@ -20,20 +20,24 @@
                 </ul>
             </nav>
         </header>
+        <section class="banner">
+            <h1 class="visually-hidden">Седона</h1>
+            <img src="http://placehold.it/1200x500" width="1200" height="500" alt='Добро пожаловать в Седона'>
+        </section>
         <main class="container">
             <section class="intro">
-                <h1>Sedona</h1>
                 <p>Седона - небольшой городок в Аризоне, заслуживающий большего!</p>
                 <p>Рассмотрим 5 причин, по которым Седона круче, чем Гранд Каньон!</p>
-                <img src="http://placehold.it/1200x500" width="1200" height="500" alt='Добро пожаловать в Седона'>
             </section>
-            <section class="feature feature-left-image">
-                <h2>Настоящий городок</h2>
-                <p>— №1 —</p>
-                <p>Седона - не аттракцион для туристов, там течет своя жизнь.</p>
-                <a href="gallery.html">
+            <section class="feature">
+                <div class="right-side">
+                    <h2>Настоящий городок</h2>
+                    <p>— №1 —</p>
+                    <p>Седона - не аттракцион для туристов, там течет своя жизнь.</p>
+                </div>
+                <div class="left-side">
                     <img src="http://placehold.it/500x200" width="500" height="200" alt='Седона - фотографии'>
-                </a>
+                </div>
             </section>
             <section class="recommendations">
                 <div class="recommendations-item">
@@ -49,13 +53,15 @@
                     <p>Не только китайского, но и местного производства!</p>
                 </div>
             </section>
-            <section class="feature feature-right-image">
-                <h2>Там есть мост Дьявола</h2>
-                <p>— №2 —</p>
-                <p>Да, по нему можно пройти! Если конечно вы осмелитесь.</p>
-                <a href="gallery.html">
+            <section class="feature">
+                <div class="left-side">
+                    <h2>Там есть мост Дьявола</h2>
+                    <p>— №2 —</p>
+                    <p>Да, по нему можно пройти! Если конечно вы осмелитесь.</p>
+                </div>
+                <div class="right-side">
                     <img src="http://placehold.it/500x200" width="500" height="200" alt='Седона - фотографии'>
-                </a>
+                </div>
             </section>
             <section class="features-list">
                 <div class="features-item">
@@ -78,7 +84,8 @@
                 <h2>Заинтересовались?</h2>
                 <p>Укажите предполагаемые даты поездки.</p>
                 <p>И мы покажем вам лучшие предложения гостиниц в Седона</p>
-                <form action="https://echo.htmlacademy.ru" method="POST" class="search-form">
+                <button onclick="javascript:showOrHideSearchForm();">Поиск гостиницы в Седоне</button>
+                <form action="https://echo.htmlacademy.ru" method="POST" class="search-form hidden">
                     <p class="search-form-item">
                         Дата заезда
                         <input type="text" name="startDate" placeholder="24 апреля 2017" class="calendar-icon">
