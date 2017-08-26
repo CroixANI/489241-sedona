@@ -1,0 +1,23 @@
+body {
+	font-family: PT Sans;
+	font-size: 14px;
+	line-height: 21px;
+	color: #333333;
+}
+
+h2 {
+	font-size: 21px;
+	font-weight: bold;
+	text-transform: uppercase;
+	color: black;
+}
+
+.hotels-search h2 {
+	font-size: 30px;
+}
+
+.hotels-search button[type='submit'] {
+	font-size: 21px;
+	font-weight: bold;
+	color: white;
+}
