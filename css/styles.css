@@ -1,23 +1,211 @@
-body {
-	font-family: PT Sans;
+html, body {
+	/* Блочная модель */
+	margin: 0;
+	padding: 5px;
+
+	/* Типографика */
+	font-family: 'PT Sans', sans-serif;
 	font-size: 14px;
 	line-height: 21px;
+	font-weight: normal;
 	color: #333333;
+	text-transform: uppercase;
+
+	/* Оформление */
+	background-color: white;
 }
 
 h2 {
+	/* Типографика */
 	font-size: 21px;
 	font-weight: bold;
-	text-transform: uppercase;
+}
+
+a {
+	/* Типографика */
+	text-decoration: none;
+}
+
+.visually-hidden {
+	position: absolute !important;
+	clip: rect(1px 1px 1px 1px); /* IE6, IE7 */
+	clip: rect(1px, 1px, 1px, 1px);
+	padding:0 !important;
+	border:0 !important;
+	height: 1px !important; 
+	width: 1px !important; 
+	overflow: hidden;
+}
+
+.main-navigation ul {
+	/* Блочная модель */
+	margin: 20px 0;
+	padding: 0;
+
+	/* Оформление */
+	list-style: none;
+}
+
+.main-navigation {
+	/* Типографика */
+	line-height: 26px;
+}
+
+.main-navigation a {
 	color: black;
 }
 
-.hotels-search h2 {
-	font-size: 30px;
+.main-navigation a:hover,
+.main-navigation a:focus {
+	color: #81b3d2;
 }
 
-.hotels-search button[type='submit'] {
+.feature {
+	/* Типографика */
+	text-align: center;
+	color: white;
+
+	/* Оформление */
+	background-color: #81b3d2;
+}
+
+.feature h2,
+.recommendations h3,
+.features-list h3 {
+	/* Типографика */
+	font-size: 21px;
+}
+
+.features-list {
+	/* Типографика */
+	text-align: center;
+	color: black;
+
+	/* Оформление */
+	background-color: #eeeeee;
+}
+
+
+.hotels-search h2 {
+	/* Типографика */
+	font-size: 30px;
+	text-align: center;
+}
+
+.hotels-search p {
+	/* Типографика */
+	text-align: center;
+}
+
+.hotels-search button {
+	/* Типографика */
+	font: inherit;
 	font-size: 21px;
 	font-weight: bold;
+	line-height: 26px;
+	text-transform: uppercase;
+	text-align: center;
+	vertical-align: middle;
 	color: white;
+
+	/* Оформление */
+	border: none;
+}
+
+.button-brown {
+	/* Типографика */
+	color: white;
+
+	/* Оформление */
+	background-color: #766357;
+}
+
+.button-brown:hover,
+.button-brown:focus {
+	/* Оформление */
+	background-color: #604e43;
+}
+
+.button-brown:active {
+	/* Оформление */
+	background-color: #503e33;
+}
+
+.button-blue {
+	/* Типографика */
+	color: white;
+
+	/* Оформление */
+	background-color: #81b3d2;
+}
+
+.button-blue:hover,
+.button-blue:focus {
+	/* Оформление */
+	background-color: #669ec0;
+}
+
+.button-blue:active {
+	/* Оформление */
+	background-color: #5496bd;
+}
+
+.hotels-search p {
+	/* Типографика */
+	line-height: 26px;
+	font-weight: bold;
+}
+
+.search-form-item input {
+	/* Блочная модель */
+	width: 346px;
+	height: 38px;
+
+	/* Типографика */
+	font: inherit;
+
+	/* Оформление */
+	border: none;
+	background-color: #f2f2f2;
+}
+
+.search-form-item input:hover {
+	/* Оформление */
+	background-color: #ebebeb;
+}
+
+.search-form-item input:focus {
+	/* Оформление */
+	background-color: white;
+	border: 2px solid #e5e5e5;
+	outline: none;
+}
+
+.hotels-filter {
+	background-image: url("../img/backgrounds/intro.jpg");
+	background-repeat: no-repeat;
+	background-size: cover;
+}
+
+.footer-social ul {
+	/* Блочная модель */
+	margin: 20px 0;
+	padding: 0;
+
+	/* Типографика */
+	text-align: center;
+
+	/* Оформление */
+	list-style: none;
+}
+
+.footer-social a {
+	/* Типографика */
+	color: black;
+}
+
+.footer-social a:hover,
+.footer-social a:focus {
+	/* Типографика */
+	color: #81b3d2;
 }

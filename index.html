@@ -3,6 +3,8 @@
     <head>
         <meta charset="utf-8">
         <title>Седона</title>
+        <link href="https://fonts.googleapis.com/css?family=PT+Sans:400,400i,700,700i&amp;subset=cyrillic" rel="stylesheet">
+        <link rel="stylesheet" href="css/normalize.css">
         <link rel="stylesheet" href="css/styles.css">
     </head>
     <body>
@@ -27,6 +29,7 @@
         </section>
         <main class="container">
             <section class="intro">
+                <h1 class="visually-hidden">Седона - описание</h1>
                 <p>Седона - небольшой городок в Аризоне, заслуживающий большего!</p>
                 <p>Рассмотрим 5 причин, по которым Седона круче, чем Гранд Каньон!</p>
             </section>
@@ -41,6 +44,7 @@
                 </div>
             </section>
             <section class="recommendations">
+                <h2 class="visually-hidden">Рекомендации</h2>
                 <div class="recommendations-item">
                     <h3>Жилье</h3>
                     <p>Рекомендуем пожить в настоящем мотеле, все как в кино!</p>
@@ -85,15 +89,17 @@
                 <h2>Заинтересовались?</h2>
                 <p>Укажите предполагаемые даты поездки.</p>
                 <p>И мы покажем вам лучшие предложения гостиниц в Седона</p>
-                <button onclick="javascript:showOrHideSearchForm();">Поиск гостиницы в Седоне</button>
+                <button onclick="javascript:showOrHideSearchForm();" class="button-brown">Поиск гостиницы в Седоне</button>
                 <form action="https://echo.htmlacademy.ru" method="POST" class="search-form hidden">
                     <p class="search-form-item">
                         Дата заезда
                         <input type="text" name="startDate" placeholder="24 апреля 2017" class="calendar-icon">
+                        <button class="calendar">Открыть календарь</button>
                     </p>
                     <p class="search-form-item">
                         Дата выезда
                         <input type="text" name="endDate" placeholder="4 июля 2017" class="calendar-icon">
+                        <button class="calendar">Открыть календарь</button>
                     </p>
                     <p class="search-form-item">
                         Взрослые
@@ -103,7 +109,7 @@
                         Дети
                         <input type="number" name="children" value="0">
                     </p>
-                    <button class="button" type="submit">Найти</button>
+                    <button type="submit" class="button-blue">Найти</button>
                 </form>
             </section>
             <section class="map">
