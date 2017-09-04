@@ -28,50 +28,57 @@
 			<section class="hotels-filter">
 				<h2 class="visually-hidden">Фильтр</h2>
 				<form action="https://echo.htmlacademy.ru" method="GET" class="hotels-filter-form">
-					<fieldset class="hotels-filter-item">
-						<p class="search-form-item left-align">
-							Инфраструктура:
+					<h3>Инфраструктура:</h4>
+					<ul>
+						<li>
 							<input id="isPoolRequired" type="checkbox" name="isPoolRequired" class="checkbox">
 							<label for="isPoolRequired">Бассейн</label>
-
+						</li>
+						<li>
 							<input id="isParkingRequired" type="checkbox" name="isParkingRequired" class="checkbox">
 							<label for="isParkingRequired">Парковка</label>
-
+						</li>
+						<li>
 							<input id="isWifiRequired" type="checkbox" name="isWifiRequired" class="checkbox">
 							<label for="isWifiRequired">Wi-Fi</label>
-						</p>
-					</fieldset>
-					<fieldset class="hotels-filter-item left-align">
-						<p class="search-form-item">
-							Тип жилья:
+						</li>
+					</ul>
+					<h3>Тип жилья:</h3>
+					<ul>
+						<li>
 							<input id="isHotelRequired" type="checkbox" name="isHotelRequired" class="checkbox">
 							<label for="isHotelRequired">Гостиница</label>
-
+						</li>
+						<li>
 							<input id="isMotelRequired" type="checkbox" name="isMotelRequired" class="checkbox">
 							<label for="isMotelRequired">Мотель</label>
-
+						</li>
+						<li>
 							<input id="isApartmentsRequired" type="checkbox" name="isApartmentsRequired" class="checkbox">
 							<label for="isApartmentsRequired">Апартаменты</label>
-						</p>
-					</fieldset>
-					<fieldset class="hotels-filter-item price-filters right-align">
-						<p class="search-form-item">
-							Стоимость в сутки (р):
-							<input type="number" name="minPrice" class="checkbox" min="0">
-							<input type="number" name="maxPrice" class="checkbox" min="0">
-							<div class="price-slider"></div>
-							<button class="button" type="submit">Показать</button>
-						</p>
-					</fieldset>
+						</li>
+					</ul>
+					<h3>Стоимость в сутки (р):</h3>
+					<div>
+						<label for="minPrice" class="visually-hidden">Минимальная стоимость</label>
+						<input type="number" name="minPrice" class="checkbox" min="0">
+
+						<label for="maxPrice" class="visually-hidden">Максимальная стоимость</label>
+						<input type="number" name="maxPrice" class="checkbox" min="0">
+
+						<div class="price-slider"></div>
+					</div>
+					<button class="button" type="submit">Показать</button>
 				</form>
 			</section>
 			<section class="hotels-sorting">
-				<h2 class="visually-hidden">Сортировка</h2>
+				<h2 class="visually-hidden">Способы сортировки</h2>
 				<p class="total">
 					Найдено <span class="total-counter">3</span>
 				</p>
 				<form action="https://echo.htmlacademy.ru" method="GET" class="hotels-sorting-form">
-					Сортировка
+					<h3>Сортировка</h3>
+
 					<button name="price" class="sort-button" type="submit">По цене</button>
 					<button name="type" class="sort-button" type="submit">По типу</button>
 					<button name="rating" class="sort-button" type="submit">По рейтингу</button>
