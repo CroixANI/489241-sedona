@@ -37,6 +37,19 @@ a {
 	text-decoration: none;
 }
 
+a:hover,
+a:focus {
+	color: #81b3d2;
+}
+
+a:click {
+	color: #cacaca;
+}
+
+a:active {
+	color: #766357;
+}
+
 p {
 	/* Блочная модель */
 	padding-top: 32px;
@@ -88,15 +101,26 @@ p {
 	color: black;
 }
 
-.site-navigation a:hover,
-.site-navigation a:focus {
-	/* Типографика */
-	color: #81b3d2;
+.main-header-logo {
+	position: relative;
+
+	height: 55px;
+	display: block;
+}
+
+.main-header-logo img {
+	position: absolute;
+	z-index: 2;
+	top: 0;
+	left: 0;
+	right: 0;
+
+	margin: 0 auto;
 }
 
 .intro h2 {
 	/* Блочная модель */
-	padding-top: 60px;
+	padding-top: 55px;
 	padding-bottom: 0px;
 	margin: 0 auto;
 	max-width: 490px;
@@ -107,8 +131,8 @@ p {
 
 .intro p {
 	/* Блочная модель */
-	padding-top: 40px;
-	padding-bottom: 60px;
+	padding-top: 30px;
+	padding-bottom: 50px;
 	margin: 0 auto;
 }
 
@@ -128,6 +152,11 @@ p {
 .feature.feature-reverse {
 	/* Блочная модель */
 	flex-direction: row-reverse;
+}
+
+.left-side {
+	padding-left: 60px;
+	padding-right: 60px;
 }
 
 .recommendations {
@@ -154,11 +183,13 @@ p {
 	/* Позиционирование */
 	position: absolute;
 	top: 60px;
-	left: 40%;
+	left: 0;
+	right: 0;
 
 	/* Блочная модель */
 	width: 75px;
 	height: 76px;
+	margin: 0 auto;
 
 	/* Оформление */
 	background-repeat: no-repeat;
@@ -228,6 +259,7 @@ p {
 
 	/* Типографика */
 	font-size: 30px;
+	line-height: 36px;
 	text-align: center;
 }
 
@@ -237,8 +269,9 @@ p {
 	padding: 0;
 
 	/* Типографика */
-	line-height: 26px;
-	font-weight: bold;
+	font-size: 14px;
+	line-height: 24px;
+	font-weight: normal;
 }
 
 .hotels-search > p:first-of-type {
@@ -404,6 +437,9 @@ p {
 }
 
 .button-brown:active {
+	/* Типографика */
+	color: #928a85;
+
 	/* Оформление */
 	background-color: #503e33;
 }
@@ -423,6 +459,9 @@ p {
 }
 
 .button-blue:active {
+	/* Типографика */
+	color: #94b9d2;
+
 	/* Оформление */
 	background-color: #5496bd;
 }
@@ -443,6 +482,10 @@ p {
 .range-filter-section {
 	flex-basis: 600px;
 }
+
+/* .page-footer {
+	position: relative;
+} */
 
 .page-footer {
 	display: flex;
@@ -491,13 +534,11 @@ p {
 	background-color: #669ec0;
 }
 
-.footer-social .social-button:active,
-.footer-social .social-button:click {
+.footer-social .social-button:active {
 	background-color: #5496bd;
 }
 
-.footer-social .social-button:active path,
-.footer-social .social-button:click path {
+.footer-social .social-button:active path {
 	fill: #88b6d1;
 }
 
@@ -518,9 +559,7 @@ p {
 	fill: #81b3d2;
 }
 
-.footer-copyright:click path,
 .footer-copyright:active path,
-.footer-copyright:click rect,
 .footer-copyright:active rect  {
 	fill: #bdbbbc;
 }
