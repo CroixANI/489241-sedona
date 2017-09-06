@@ -149,6 +149,12 @@ p {
 	background-color: #81b3d2;
 }
 
+.feature img {
+	display: block;
+	padding: 0;
+	margin: 0;
+}
+
 .feature.feature-reverse {
 	/* Блочная модель */
 	flex-direction: row-reverse;
@@ -305,12 +311,12 @@ p {
 	min-height: 86px;
 }
 
-.hotels-search > div {
+.hotels-search .overlay-content {
 	/* Позиционирование */
 	position: relative;
 }
 
-.hotels-search form {
+.hotels-search .search-form {
 	/* Позиционирование */
 	position: absolute;
 	top: 0;
@@ -319,40 +325,42 @@ p {
 	z-index: 2;
 
 	/* Блочная модель */
+	padding: 55px;
 	margin: 0 auto;
-	width: 568px;
+	width: 458px;
 
 	/* Типографика */
 	text-align: left;
+	font-weight: bold;
 
 	/* Оформление */
 	background-color: white;
 }
 
-.hotels-search .search-form {
-	/* Типографика */
-	font-weight: bold;
-}
-
-.hotels-search .search-form .search-form-item {
+.hotels-search .search-form .flex-row {
 	/* Блочная модель */
 	display: flex;
 	flex-wrap: nowrap;
 	align-items: center;
-	justify-content: center;
+	justify-content: flex-end;
 }
 
-.hotels-search .search-form > .search-form-item {
+.hotels-search .search-form > .flex-row {
 	/* Блочная модель */
-	padding-top: 30px;
+	padding-bottom: 30px;
 }
 
-.hotels-search .search-form > .search-form-item:first-child {
+.hotels-search .search-form > .flex-row:last-of-type {
 	/* Блочная модель */
-	padding-top: 55px;
+	padding-bottom: 55px;
 }
 
-.search-form-item button:not(.button-blue) {
+.hotels-search .search-form .flex-row.half-width {
+	/* Блочная модель */
+	width: 50%;
+}
+
+.hotels-search .search-form button:not(.button-blue) {
 	/* Блочная модель */
 	width: 40px;
 	min-height: 40px;
@@ -368,7 +376,7 @@ p {
 	cursor: pointer;
 }
 
-.search-form-item .calendar {
+.hotels-search .search-form .calendar {
 	/* Типографика */
 	font-size: 0;
 
@@ -378,17 +386,22 @@ p {
 	background-position: 50% 50%;
 }
 
-.search-form-item.half-width {
-	/* Блочная модель */
-	width: 50%;
-}
 
-.search-form-item.half-width input {
+/* .no-spin::-webkit-inner-spin-button, .no-spin::-webkit-outer-spin-button {
+    -webkit-appearance: none !important;
+    margin: 0 !important;
+    -moz-appearance:textfield !important;
+} */
+
+.hotels-search .search-form .half-width input {
 	/* Блочная модель */
 	width: 40px;
+
+	/* Типографика */
+	text-align: center;
 }
 
-.search-form-item input {
+.hotels-search .search-form input {
 	/* Блочная модель */
 	width: 306px;
 	height: 38px;
@@ -402,22 +415,30 @@ p {
 	background-color: #f2f2f2;
 }
 
-.search-form-item input:hover {
+.hotels-search .search-form input:hover {
 	/* Оформление */
 	background-color: #ebebeb;
 }
 
-.search-form-item input:focus {
+.hotels-search .search-form input:focus {
 	/* Оформление */
 	background-color: white;
 	border: 2px solid #e5e5e5;
 	outline: none;
 }
 
-.search-form-item .button-blue {
+.hotels-search .search-form label {
+	padding-right: 20px;
+}
+
+.map img {
+	display: block;
+	padding: 0;
+	margin: 0;
+}
+
+.search-form .button-blue {
 	/* Блочная модель */
-	margin-top: 55px;
-	margin-bottom: 55px;
 	min-height: 58px;
 	width: 458px;
 }
@@ -483,13 +504,14 @@ p {
 	flex-basis: 600px;
 }
 
-/* .page-footer {
-	position: relative;
-} */
-
 .page-footer {
+	position: relative;
+
 	display: flex;
 	align-items: center;
+	margin-top: -116px;
+	
+    background: rgba(255, 255, 255, .5);
 }
 
 .page-footer > div {
