@@ -52,7 +52,7 @@ a:active {
 
 p {
 	/* Блочная модель */
-	padding-top: 32px;
+	padding-top: 0;
 	margin: 0;
 }
 
@@ -155,6 +155,10 @@ p {
 	margin: 0;
 }
 
+.feature p {
+	padding-top: 32px;
+}
+
 .feature.feature-reverse {
 	/* Блочная модель */
 	flex-direction: row-reverse;
@@ -173,6 +177,10 @@ p {
 .recommendations .recommendations-item {
 	/* Блочная модель */
 	width: 33%;
+}
+
+.recommendations .recommendations-item p {
+	padding-top: 32px;
 }
 
 .recommendations .recommendations-item h3 {
@@ -247,6 +255,10 @@ p {
 
 	/* Типографика */
 	color: black;
+}
+
+.features-list .features-item p {
+	padding-top: 32px;
 }
 
 .features-list .features-item p:last-child {
@@ -488,10 +500,16 @@ p {
 }
 
 .hotels-filter {
+	padding: 30px;
+
+	/* Временно. Для разметки */
+	height: 217px;
+
 	/* Оформление */
-	background-image: url("../img/backgrounds/intro.jpg");
+	background-image: url("../img/backgrounds/intro-blur.jpg");
 	background-repeat: no-repeat;
 	background-size: cover;
+	background-position: 50% 50%;
 }
 
 .hotels-filter-form {
@@ -500,18 +518,92 @@ p {
 	justify-content: space-between;
 }
 
+.hotels-filter-form ul {
+	list-style: none;
+	padding: 0;
+	margin: 0;
+}
+
 .range-filter-section {
 	flex-basis: 600px;
 }
 
-.page-footer {
-	position: relative;
-
+.hotels-sorting {
 	display: flex;
 	align-items: center;
+	justify-content: flex-start;
+
+	/* Временно. Для разметки */
+	height: 85px;
+}
+
+.hotels-result > ul {
+	list-style: none;
+	padding: 0;
+	margin: 0;
+}
+
+.hotels-result > ul > li {
+	display: flex;
+	align-items: stretch;
+	justify-content: flex-start;
+
+	text-align: left;
+
+	/* Временно. Для разметки */
+	height: 150px;
+}
+
+.hotels-result > ul > li > div:last-of-type {
+	flex: 1;
+	text-align: right;
+}
+
+.hotels-result .rating li {
+	display: inline;
+	
+}
+
+.hotels-result .rating .glyphicon-star {
+	width: 18px;
+	height: 17px;
+	background-image: url("../img/icons/star-icon.svg");
+}
+
+.hotels-result .button-blue {
+	display: inline-block;
+	width: 110px;
+	height: 27px;
+
+
+	text-align: center;
+	font-size: 14px;
+	font-weight: bold;
+	line-height: 21px;
+}
+
+.hotels-result .button-brown {
+	display: inline-block;
+	widows: 142px;
+	height: 27px;
+
+	text-align: center;
+	font-size: 14px;
+	font-weight: bold;
+	line-height: 21px;
+}
+
+.page-footer {
+	display: flex;
+	align-items: center;
+}
+
+.page-footer-overlay {
+	position: relative;
+	
 	margin-top: -116px;
 	
-    background: rgba(255, 255, 255, .5);
+	background: rgba(255, 255, 255, .5);
 }
 
 .page-footer > div {
