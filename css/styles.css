@@ -366,7 +366,7 @@ p {
 	display: flex;
 	flex-wrap: nowrap;
 	align-items: center;
-	justify-content: flex-end;
+	justify-content: flex-start;
 }
 
 .search-form > .flex-row {
@@ -439,6 +439,7 @@ p {
 
 .search-form input {
 	/* Блочная модель */
+	flex: 1;
 	height: 36px;
 
 	/* Оформление */
@@ -566,8 +567,8 @@ p {
 	display: flex;
 	align-items: flex-start;
 	justify-content: space-between;
-	padding-left: 40px;
-	padding-right: 40px;
+	padding-left: 45px;
+	padding-right: 52px;
 
 	/* Типографика */
 	color: white;
@@ -595,7 +596,7 @@ p {
 
 .hotels-filter-form .range-filter-section {
 	/* Блочная модель */
-	flex-basis: 320px;
+	flex-basis: 310px;
 	margin-left: auto;
 
 	/* Типографика */
@@ -648,7 +649,7 @@ p {
 }
 
 .hotels-filter-form ul li:not(:last-of-type) {
-	padding-bottom: 20px;
+	padding-bottom: 13px;
 }
 
 .hotels-filter-form .checkbox {
@@ -672,6 +673,7 @@ p {
 	height: 27px;
     vertical-align: middle;
 	padding-right: 16px;
+	margin-bottom: 5px;
 
 	/* Оформление */
     background: url("../img/icons/checkbox-off.svg") 0px center no-repeat;
@@ -693,12 +695,22 @@ p {
 	overflow: hidden; 
 
 	/* Блочная модель */
-	width:23px; 
-    height:23px; 
+	width:20px; 
+    height:22px; 
 	
 	/* Оформление */
-	background:url("../img/icons/range-filter-button.svg") no-repeat; 
+	background-image: url("../img/icons/range-filter-button.svg");
+	background-repeat: no-repeat;
+	background-size: 100% 100%;
+	background-color: transparent;
 	border-style:none; 
+}
+
+.range-filter-section .ui-slider .ui-slider-handle:hover,
+.range-filter-section .ui-slider .ui-slider-handle:focus {
+	/* Блочная модель */
+	width:22px; 
+    height:24px; 
 }
 
 .range-filter-section .button-white {
@@ -730,7 +742,8 @@ p {
 	display: flex;
 	align-items: center;
 	justify-content: flex-start;
-	padding-left: 72px;
+	padding-left: 73px;
+	padding-right: 80px;
 	padding-top: 30px;
 	padding-bottom: 30px;
 
@@ -782,7 +795,7 @@ p {
 .hotels-result-item .details p:first-of-type,
 .hotels-result-item .actions a:first-of-type {
 	/* Блочная модель */
-	flex-basis: 105px;
+	flex-basis: 110px;
 	margin-right: 10px;
 }
 
@@ -808,7 +821,7 @@ p {
 	border-bottom: 1px dashed #95bed8;
 }
 
-.hotels-sorting-form .sort-types .sort-button:click {
+.hotels-sorting-form .sort-types .sort-button:active {
 	/* Типографика */
 	color:black;
 
@@ -822,7 +835,6 @@ p {
 	flex-direction: row;
 	flex-grow: 1;
 	justify-content: flex-end;
-	padding-right: 73px;
 }
 
 .hotels-sorting .sort-direction .sort-button {
@@ -928,7 +940,7 @@ p {
 	padding-top: 29px;
 	padding-bottom: 29px;
 	padding-left: 73px;
-	padding-right: 73px;
+	padding-right: 80px;
 
 	/* Типографика */
 	text-align: left;
@@ -949,6 +961,16 @@ p {
 	border-bottom: 2px solid #e5e5e5;
 }
 
+.hotels-result-item .description-column {
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+}
+
+.description-column .details {
+	padding-bottom: 5px;
+}
+
 .hotels-result-item .title {
 	/* Блочная модель */
 	display: block;
@@ -957,11 +979,6 @@ p {
 	font-size: 21px;
 	font-weight: bold;
 	line-height: 26px;
-}
-
-.hotels-result-item .details {
-	/* Блочная модель */
-	padding-bottom: 17px;
 }
 
 .hotels-result-item .rating-column {
@@ -995,10 +1012,12 @@ p {
 	display: inline-block;
 	width: 18px;
 	height: 17px;
+	padding-left: 2px;
 
 	/* Оформление */
 	background-image: url("../img/icons/star-icon.svg");
 	background-repeat: no-repeat;
+	background-position: 100% 100%;
 }
 
 .hotels-result .button-blue {
