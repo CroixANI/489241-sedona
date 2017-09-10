@@ -18,13 +18,13 @@
 				max: 5000,
 				values: [ 0, 3000 ],
 				slide: function( event, ui ) {
-					$( "#minPrice" ).val(ui.values[ 0 ]);
-					$( "#maxPrice" ).val(ui.values[ 1 ]);
+					$( "#minPrice" ).html("ОТ " + ui.values[ 0 ]);
+					$( "#maxPrice" ).html("ДО " + ui.values[ 1 ]);
 				}
 			});
 			
-			$( "#minPrice" ).val($( "#rangeSlider" ).slider( "values", 0 ));
-			$( "#maxPrice" ).val($( "#rangeSlider" ).slider( "values", 1 ));
+			$( "#minPrice" ).html("ОТ " + $( "#rangeSlider" ).slider( "values", 0 ));
+			$( "#maxPrice" ).html("ДО " + $( "#rangeSlider" ).slider( "values", 1 ));
 		} );
 		</script>
     </head>
@@ -85,15 +85,12 @@
 					</div>
 					<div class="range-filter-section">
 						<h3>Стоимость в сутки (р):</h3>
-						<div>
-							<label for="minPrice" class="visually-hidden">Минимальная стоимость</label>
-							<input id="minPrice" type="number" name="minPrice" min="0">
-	
-							<label for="maxPrice" class="visually-hidden">Максимальная стоимость</label>
-							<input id="maxPrice" type="number" name="maxPrice" min="0">
-	
-							<div id="rangeSlider"></div>
+						<div class="range-prices">
+							<div id="minPrice">ОТ</div>
+							<div id="maxPrice">ДО</div>
 						</div>
+
+						<div id="rangeSlider"></div>
 						<button class="button-white" type="submit">Показать</button>
 					</div>
 				</form>
@@ -106,7 +103,7 @@
 				<form class="hotels-sorting-form" action="https://echo.htmlacademy.ru" method="GET">
 					<div class="sort-title">Сортировка:</div>
 					<div class="sort-types">
-						<button class="sort-button" type="submit" name="price">По цене</button>
+						<button class="sort-button active" type="submit" name="price">По цене</button>
 						<button class="sort-button" type="submit" name="type">По типу</button>
 						<button class="sort-button" type="submit" name="rating">По рейтингу</button>
 					</div>

@@ -505,7 +505,7 @@ p {
 .hotels-filter-form {
 	/* Блочная модель */
 	display: flex;
-	align-items: center;
+	align-items: flex-start;
 	justify-content: space-between;
 	padding-left: 41px;
 	padding-right: 41px;
@@ -515,17 +515,64 @@ p {
 }
 
 .hotels-filter-form h3 {
-	/* Блочная модель */
-	padding-bottom: 30px;
-
 	/* Типографика */
 	font-size: 16px;
 }
 
 .hotels-filter-form .infrastructure-filter,
 .hotels-filter-form .type-filter {
+	/* Блочная модель */
+	flex-basis: 255px;
+
 	/* Типографика */
 	text-align: left;
+}
+
+.hotels-filter-form .infrastructure-filter h3,
+.hotels-filter-form .type-filter h3 {
+	/* Блочная модель */
+	padding-bottom: 30px; 
+}
+
+.hotels-filter-form .range-filter-section {
+	/* Блочная модель */
+	flex-basis: 320px;
+	margin-left: auto;
+
+	/* Типографика */
+	text-align: center;
+}
+
+.hotels-filter-form .range-filter-section h3 {
+	/* Блочная модель */
+	margin-bottom: 10px;
+
+	/* Типографика */
+	text-align: left;
+}
+
+.hotels-filter-form .range-filter-section .range-prices {
+	/* Блочная модель */
+	display: flex;
+	padding-top: 3px;
+	padding-bottom: 3px;
+	margin-bottom: 20px;
+
+	/* Оформление */
+	border: 2px solid white;
+	border-radius: 5px;
+}
+
+.hotels-filter-form .range-filter-section .range-prices div {
+	flex: 1 1;
+}
+
+.hotels-filter-form .range-filter-section .range-prices div:last-child {
+	border-left: 2px solid white;
+}
+
+.hotels-filter-form .range-filter-section .ui-slider {
+	margin-bottom: 30px;
 }
 
 .hotels-filter-form ul {
@@ -576,9 +623,30 @@ p {
 	background-image: url("../img/icons/checkbox-on.svg");
 }
 
-.range-filter-section {
-	/* Блочная модель */
-	flex-basis: 600px;
+.range-filter-section .ui-slider .ui-slider-handle {
+	width:23px; 
+    height:23px; 
+	background:url("../img/icons/range-filter-button.svg") no-repeat; 
+	overflow: hidden; 
+    position:absolute;
+    top: -10px;
+    border-style:none; 
+}
+
+.range-filter-section .button-white {
+	border: 2px solid white;
+    background: none;
+    color: white;
+    width: 133px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    border-radius: 5px;
+}
+
+.range-filter-section .button-white:hover, 
+.range-filter-section .button-white:focus {
+	color: black;
+	background-color: white;
 }
 
 .hotels-sorting {
@@ -647,13 +715,38 @@ p {
 	/* Типографика */
 	font: inherit;
 	font-size: 12px;
-	line-height: 16px;
-	color:inherit;
+	line-height: 18px;
+	color: #cacaca;
+	text-transform: uppercase;
 	
 	/* Оформление */
 	background:none;
 	border:none;
+	border-bottom: 1px dashed #cacaca;
 	cursor: pointer;
+}
+
+.hotels-sorting-form .sort-types .sort-button {
+	margin-right: 33px;
+}
+
+.hotels-sorting-form .sort-types .sort-button.active {
+	color: #95bed8;
+
+	border:none;
+}
+
+.hotels-sorting-form .sort-types .sort-button:hover,
+.hotels-sorting-form .sort-types .sort-button:focus {
+	color: #95bed8;
+
+	border-bottom: 1px dashed #95bed8;
+}
+
+.hotels-sorting-form .sort-types .sort-button:click {
+	color:black;
+
+	border: none;
 }
 
 .hotels-result > ul {
