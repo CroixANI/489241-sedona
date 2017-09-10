@@ -3,13 +3,34 @@
     <head>
         <meta charset="utf-8">
 		<title>Седона - отели</title>
-		<link href="https://fonts.googleapis.com/css?family=PT+Sans:400,400i,700,700i&amp;subset=cyrillic" rel="stylesheet">
+		<!-- <link href="https://fonts.googleapis.com/css?family=PT+Sans:400,400i,700,700i&amp;subset=cyrillic" rel="stylesheet"> -->
         <link rel="stylesheet" href="css/normalize.css">
-        <link rel="stylesheet" href="css/styles.css">
+		<link rel="stylesheet" href="css/styles.css">
+		<link rel="stylesheet" href="css/jquery.ui.css">
+		<link rel="stylesheet" href="css/jquery.ui.fix.css">
+		<script src="js/jquery.js"></script>
+		<script src="js/jquery.ui.js"></script>
+		<script>
+		$( function() {
+			$( "#rangeSlider" ).slider({
+				range: true,
+				min: 0,
+				max: 5000,
+				values: [ 0, 3000 ],
+				slide: function( event, ui ) {
+					$( "#minPrice" ).val(ui.values[ 0 ]);
+					$( "#maxPrice" ).val(ui.values[ 1 ]);
+				}
+			});
+			
+			$( "#minPrice" ).val($( "#rangeSlider" ).slider( "values", 0 ));
+			$( "#maxPrice" ).val($( "#rangeSlider" ).slider( "values", 1 ));
+		} );
+		</script>
     </head>
     <body>
 		<header class="page-header container">
-			<nav class="main-navigation">
+		    <nav class="main-navigation">
 				<ul class="site-navigation">
 					<li><a href="index.html#intro">Информация</a></li>
 					<li><a href="index.html">Фото и видео</a></li>
@@ -19,7 +40,7 @@
 						</a>
 					</li>
 					<li><a href="index.html#map">Карта штата</a></li>
-					<li><a href="hotels.html">Гостиницы</a></li>
+					<li><a class="active" href="hotels.html">Гостиницы</a></li>
 				</ul>
 			</nav>
 		</header>
@@ -27,38 +48,38 @@
 			<h1 class="visually-hidden">Седона - отели</h1>
 			<section class="hotels-filter">
 				<h2 class="visually-hidden">Фильтр</h2>
-				<form action="https://echo.htmlacademy.ru" method="GET" class="hotels-filter-form">
-					<div>
+				<form class="hotels-filter-form" action="https://echo.htmlacademy.ru" method="GET">
+					<div class="infrastructure-filter">
 						<h3>Инфраструктура:</h4>
 						<ul>
 							<li>
-								<input id="isPoolRequired" type="checkbox" name="isPoolRequired" class="checkbox">
-								<label for="isPoolRequired">Бассейн</label>
+								<input class="checkbox" id="isPoolRequired" type="checkbox" name="isPoolRequired">
+								<label for="isPoolRequired"><span></span>Бассейн</label>
 							</li>
 							<li>
-								<input id="isParkingRequired" type="checkbox" name="isParkingRequired" class="checkbox">
-								<label for="isParkingRequired">Парковка</label>
+								<input class="checkbox" id="isParkingRequired" type="checkbox" name="isParkingRequired">
+								<label for="isParkingRequired"><span></span>Парковка</label>
 							</li>
 							<li>
-								<input id="isWifiRequired" type="checkbox" name="isWifiRequired" class="checkbox">
-								<label for="isWifiRequired">Wi-Fi</label>
+								<input class="checkbox" id="isWifiRequired" type="checkbox" name="isWifiRequired">
+								<label for="isWifiRequired"><span></span>Wi-Fi</label>
 							</li>
 						</ul>
 					</div>
-					<div>
+					<div class="type-filter">
 						<h3>Тип жилья:</h3>
 						<ul>
 							<li>
-								<input id="isHotelRequired" type="checkbox" name="isHotelRequired" class="checkbox">
-								<label for="isHotelRequired">Гостиница</label>
+								<input class="checkbox" id="isHotelRequired" type="checkbox" name="isHotelRequired">
+								<label for="isHotelRequired"><span></span>Гостиница</label>
 							</li>
 							<li>
-								<input id="isMotelRequired" type="checkbox" name="isMotelRequired" class="checkbox">
-								<label for="isMotelRequired">Мотель</label>
+								<input class="checkbox" id="isMotelRequired" type="checkbox" name="isMotelRequired">
+								<label for="isMotelRequired"><span></span>Мотель</label>
 							</li>
 							<li>
-								<input id="isApartmentsRequired" type="checkbox" name="isApartmentsRequired" class="checkbox">
-								<label for="isApartmentsRequired">Апартаменты</label>
+								<input class="checkbox" id="isApartmentsRequired" type="checkbox" name="isApartmentsRequired">
+								<label for="isApartmentsRequired"><span></span>Апартаменты</label>
 							</li>
 						</ul>
 					</div>
@@ -66,62 +87,66 @@
 						<h3>Стоимость в сутки (р):</h3>
 						<div>
 							<label for="minPrice" class="visually-hidden">Минимальная стоимость</label>
-							<input type="number" name="minPrice" class="checkbox" min="0">
+							<input id="minPrice" type="number" name="minPrice" min="0">
 	
 							<label for="maxPrice" class="visually-hidden">Максимальная стоимость</label>
-							<input type="number" name="maxPrice" class="checkbox" min="0">
+							<input id="maxPrice" type="number" name="maxPrice" min="0">
 	
-							<div class="price-slider"></div>
+							<div id="rangeSlider"></div>
 						</div>
-						<button class="button" type="submit">Показать</button>
+						<button class="button-white" type="submit">Показать</button>
 					</div>
 				</form>
 			</section>
 			<section class="hotels-sorting">
 				<h2 class="visually-hidden">Способы сортировки</h2>
-				<p class="total">
+				<p class="total-column">
 					Найдено <span class="total-counter">3</span>
 				</p>
-				<form action="https://echo.htmlacademy.ru" method="GET" class="hotels-sorting-form">
-					<h3 class="visually-hidden">Сортировка</h3>
-
-					<button name="price" class="sort-button" type="submit">По цене</button>
-					<button name="type" class="sort-button" type="submit">По типу</button>
-					<button name="rating" class="sort-button" type="submit">По рейтингу</button>
-
-					<button name="ascending" class="sort-button up-arrow-button" type="submit">По возрастанию</button>
-					<button name="descending" class="sort-button down-arrow-button" type="submit">По убыванию</button>
+				<form class="hotels-sorting-form" action="https://echo.htmlacademy.ru" method="GET">
+					<div class="sort-title">Сортировка:</div>
+					<div class="sort-types">
+						<button class="sort-button" type="submit" name="price">По цене</button>
+						<button class="sort-button" type="submit" name="type">По типу</button>
+						<button class="sort-button" type="submit" name="rating">По рейтингу</button>
+					</div>
+					<div class="sort-direction">
+						<button class="sort-button up-arrow-button" type="submit" name="ascending">По возрастанию</button>
+						<button class="sort-button down-arrow-button" type="submit" name="descending">По убыванию</button>
+					</div>
 				</form>
 			</section>
 			<section class="hotels-result">
+				<h2 class="visually-hidden">Список отелей</h2>
 				<ul>
 					<li class="hotels-result-item">
-						<div>
-								<img src="img/content/amara-resort.jpg" width="135" height="90" alt='Отель Amara Resort &and; SPA'>
+						<div class="icon-column">
+								<img src="img/content/amara-resort.jpg" width="135" height="90" alt="Отель Amara Resort &and; SPA">
 						</div>
-						<div>
+						<div class="description-column">
 							<h2>Amara Resort &and; SPA</h2>
-							<p class="hotels-result-item-type">Гостиница</p>
-							<p class="hotels-result-item-price">ОТ 4000р</p>
-							<a href="hotel-details.html" class="button button-blue">Подробнее</a>
-							<a href="hotel-order.html" class="button button-brown">Забронировать</a>
+							<div class="details">
+								<p>Гостиница</p>
+								<p>от 4000р</p>
+							</div>
+							<div class="actions">
+								<a class="button-blue" href="hotel-details.html">Подробнее</a>
+								<a class="button-brown" href="hotel-order.html">Забронировать</a>
+							</div>
 						</div>
-						<div>
-							<ul class="rating rating-5">
-								<li>
-									<span class="glyphicon-star"></span>
+						<div class="rating-column">
+							<ul class="rating">
+								<li class="glyphicon-star">
+									&nbsp;
 								</li>
-								<li>
-									<span class="glyphicon-star"></span>
+								<li class="glyphicon-star">
+									&nbsp;
 								</li>
-								<li>
-									<span class="glyphicon-star"></span>
+								<li class="glyphicon-star">
+									&nbsp;
 								</li>
-								<li>
-									<span class="glyphicon-star"></span>
-								</li>
-								<li>
-									<span class="glyphicon-star"></span>
+								<li class="glyphicon-star">
+									&nbsp;
 								</li>
 							</ul>
 							<p class="rating-info">
@@ -130,33 +155,31 @@
 						</div>
 					</li>
 					<li class="hotels-result-item">
-						<div>
-							<img src="img/content/desert-quail.jpg" width="135" height="90" alt='Отель Desert Quail Inn'>
+						<div class="icon-column">
+							<img src="img/content/desert-quail.jpg" width="135" height="90" alt="Отель Desert Quail Inn">
 						</div>
-						<div>
+						<div class="description-column">
 							<h2>Desert Quail Inn</h2>
 							
-							<p class="hotels-result-item-type">Мотель</p>
-							<p class="hotels-result-item-price">ОТ 3000р</p>
-							<a href="hotel-details.html" class="button button-blue">Подробнее</a>
-							<a href="hotel-order.html" class="button button-brown">Забронировать</a>
+							<div class="details">
+								<p>Мотель</p>
+								<p>от 3000р</p>
+							</div>
+							<div class="actions">
+								<a class="button-blue" href="hotel-details.html">Подробнее</a>
+								<a class="button-brown" href="hotel-order.html">Забронировать</a>
+							</div>
 						</div>
-						<div>
-							<ul class="rating rating-3">
-								<li>
-									<span class="glyphicon-star"></span>
+						<div class="rating-column">
+							<ul class="rating">
+								<li class="glyphicon-star">
+									&nbsp;
 								</li>
-								<li>
-									<span class="glyphicon-star"></span>
+								<li class="glyphicon-star">
+									&nbsp;
 								</li>
-								<li>
-									<span class="glyphicon-star"></span>
-								</li>
-								<li>
-									<span class="glyphicon-star"></span>
-								</li>
-								<li>
-									<span class="glyphicon-star"></span>
+								<li class="glyphicon-star">
+									&nbsp;
 								</li>
 							</ul>
 							<p class="rating-info">
@@ -165,38 +188,32 @@
 						</div>
 					</li>
 					<li class="hotels-result-item">
-						<div>
-							<img src="img/content/villas-at-poco.jpg" width="135" height="90" alt='Отель Villas Poco Diablo'>
+						<div class="icon-column">
+							<img src="img/content/villas-at-poco.jpg" width="135" height="90" alt="Отель Villas Poco Diablo">
 						</div>
-						<div>
+						<div class="description-column">
 							<h2>Villas Poco Diablo</h2>
-							
-							<p class="hotels-result-item-type">Апартаменты</p>
-							<p class="hotels-result-item-price">ОТ 2000р</p>
-							<a href="hotel-details.html" class="button button-blue">Подробнее</a>
-							<a href="hotel-order.html" class="button button-brown">Забронировать</a>
+							<div class="details">
+								<p>Апартаменты</p>
+								<p>от 2000р</p>
+							</div>
+							<div class="actions">
+								<a class="button-blue" href="hotel-details.html">Подробнее</a>
+								<a class="button-brown" href="hotel-order.html">Забронировать</a>
+							</div>
 						</div>
-						<div>
-							<ul class="rating rating-2">
-								<li>
-									<span class="glyphicon-star"></span>
+						<div class="rating-column">
+							<ul class="rating">
+								<li class="glyphicon-star">
+									&nbsp;
 								</li>
-								<li>
-									<span class="glyphicon-star"></span>
-								</li>
-								<li>
-									<span class="glyphicon-star"></span>
-								</li>
-								<li>
-									<span class="glyphicon-star"></span>
-								</li>
-								<li>
-									<span class="glyphicon-star"></span>
+								<li class="glyphicon-star">
+									&nbsp;
 								</li>
 							</ul>
-							<p class="rating-info">
+							<div class="rating-info">
 								Рейтинг: 9,2
-							</p>
+							</div>
 						</div>
 					</li>
 				</ul>

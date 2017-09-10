@@ -35,6 +35,7 @@ h2, h3 {
 a {
 	/* Типографика */
 	text-decoration: none;
+	color: black;
 }
 
 a:hover,
@@ -46,7 +47,8 @@ a:click {
 	color: #cacaca;
 }
 
-a:active {
+a:active,
+a.active {
 	color: #766357;
 }
 
@@ -94,11 +96,8 @@ p {
 
 	/* Типографика */
 	text-align: center;
-}
-
-.site-navigation a:not(.main-header-logo) {
-	/* Типографика */
-	color: black;
+	font-weight: bold;
+	line-height: 26px;
 }
 
 .main-header-logo {
@@ -398,13 +397,6 @@ p {
 	background-position: 50% 50%;
 }
 
-
-/* .no-spin::-webkit-inner-spin-button, .no-spin::-webkit-outer-spin-button {
-    -webkit-appearance: none !important;
-    margin: 0 !important;
-    -moz-appearance:textfield !important;
-} */
-
 .hotels-search .search-form .half-width input {
 	/* Блочная модель */
 	width: 40px;
@@ -500,10 +492,8 @@ p {
 }
 
 .hotels-filter {
-	padding: 30px;
-
-	/* Временно. Для разметки */
-	height: 217px;
+	/* Блочная модель */
+	padding: 32px;
 
 	/* Оформление */
 	background-image: url("../img/backgrounds/intro-blur.jpg");
@@ -513,69 +503,227 @@ p {
 }
 
 .hotels-filter-form {
+	/* Блочная модель */
 	display: flex;
 	align-items: center;
 	justify-content: space-between;
+	padding-left: 41px;
+	padding-right: 41px;
+
+	/* Типографика */
+	color: white;
+}
+
+.hotels-filter-form h3 {
+	/* Блочная модель */
+	padding-bottom: 30px;
+
+	/* Типографика */
+	font-size: 16px;
+}
+
+.hotels-filter-form .infrastructure-filter,
+.hotels-filter-form .type-filter {
+	/* Типографика */
+	text-align: left;
 }
 
 .hotels-filter-form ul {
-	list-style: none;
+	/* Блочная модель */
 	padding: 0;
 	margin: 0;
+
+	/* Типографика */
+	font-weight: normal;
+	text-align: left;
+
+	/* Оформление */
+	list-style: none;
+}
+
+.hotels-filter-form ul li:not(:last-of-type) {
+	padding-bottom: 22px;
+}
+
+.hotels-filter-form .checkbox {
+	/* Блочная модель */
+	display: none;
+}
+
+.hotels-filter-form .checkbox + label {
+	/* Оформление */
+	cursor: pointer;
+}
+
+/*
+	Took solution from here https://blogs.adobe.com/creativecloud/css-vs-svg-styling-checkboxes-and-radio-buttons/.
+	TODO: How to color SVG to white in this case?
+ */
+.hotels-filter-form .checkbox + label span {
+	/* Блочная модель */
+	display: inline-block;
+    vertical-align: middle;
+    width: 27px;
+	height: 27px;
+	padding-right: 16px;
+
+	/* Оформление */
+    background: url("../img/icons/checkbox-off.svg") 0px center no-repeat;
+}
+
+.hotels-filter-form .checkbox:checked + label span {
+	/* Оформление */
+	background-image: url("../img/icons/checkbox-on.svg");
 }
 
 .range-filter-section {
+	/* Блочная модель */
 	flex-basis: 600px;
 }
 
 .hotels-sorting {
+	/* Блочная модель */
 	display: flex;
 	align-items: center;
 	justify-content: flex-start;
+	padding-left: 72px;
+
+	text-transform: uppercase;
 
 	/* Временно. Для разметки */
 	height: 85px;
 }
 
-.hotels-result > ul {
-	list-style: none;
-	padding: 0;
-	margin: 0;
+.hotels-sorting .total-column {
+	font-size: 21px;
+	line-height: 26px;
+	font-weight: bold;
 }
 
-.hotels-result > ul > li {
-	display: flex;
-	align-items: stretch;
-	justify-content: flex-start;
+.hotels-sorting .total-column,
+.hotels-result-item .icon-column {
+	/* Блочная модель */
+	flex-basis: 165px;
 
+	/* Типографика */
 	text-align: left;
-
-	/* Временно. Для разметки */
-	height: 150px;
 }
 
-.hotels-result > ul > li > div:last-of-type {
-	flex: 1;
+.hotels-sorting .hotels-sorting-form {
+	flex-grow: 1;
+	text-align: left;
+}
+
+.hotels-sorting .hotels-sorting-form .sort-title,
+.hotels-sorting .hotels-sorting-form .sort-types {
+	font-size: 12px;
+	line-height: 18px;
+}
+
+.hotels-sorting .hotels-sorting-form,
+.hotels-result-item .details,
+.hotels-result-item .actions {
+	display: flex;
+	align-items: center;
+	justify-content: flex-start;
+}
+
+.hotels-sorting .sort-title,
+.hotels-result-item .details p:first-of-type,
+.hotels-result-item .actions a:first-of-type {
+	flex-basis: 107px;
+	margin-right: 10px;
+}
+
+.hotels-sorting .sort-direction {
+	flex-grow: 1;
 	text-align: right;
 }
 
-.hotels-result .rating li {
-	display: inline;
+.hotels-sorting-form button {
+	/* Блочная модель */
+	padding:0;
+
+	/* Типографика */
+	font: inherit;
+	font-size: 12px;
+	line-height: 16px;
+	color:inherit;
 	
+	/* Оформление */
+	background:none;
+	border:none;
+	cursor: pointer;
+}
+
+.hotels-result > ul {
+	/* Блочная модель */
+	padding: 0;
+	margin: 0;
+	list-style: none;
+}
+
+.hotels-result .hotels-result-item {
+	/* Блочная модель */
+	display: flex;
+	align-items: stretch;
+	justify-content: flex-start;
+	padding-top: 30px;
+	padding-bottom: 30px;
+	padding-left: 72px;
+
+	/* Типографика */
+	text-align: left;
+
+	/* Оформление */
+	border-top: 2px solid #e5e5e5;
+}
+
+.hotels-result .hotels-result-item:last-of-type {
+	/* Оформление */
+	border-bottom: 2px solid #e5e5e5;
+}
+
+.hotels-result-item h2 {
+	padding-bottom: 10px;
+}
+
+.hotels-result-item .details {
+	padding-bottom: 10px;
+}
+
+
+
+
+
+.hotels-result-item .rating-column {
+	flex: 1;
+	display: flex;
+	flex-direction: column;
+	text-align: right;
+	align-content: space-between;
+}
+
+.hotels-result-item .rating-column .rating-info {
+	flex: 1;
 }
 
 .hotels-result .rating .glyphicon-star {
+	display: inline-block;
 	width: 18px;
 	height: 17px;
 	background-image: url("../img/icons/star-icon.svg");
+	background-repeat: no-repeat;
 }
 
 .hotels-result .button-blue {
-	display: inline-block;
-	width: 110px;
-	height: 27px;
+	border: none;
+	padding-left: 17px;
+	padding-right: 17px;
+	padding-top: 4px;
+	padding-bottom: 4px;
 
-
+	text-decoration: none;
 	text-align: center;
 	font-size: 14px;
 	font-weight: bold;
@@ -583,10 +731,13 @@ p {
 }
 
 .hotels-result .button-brown {
-	display: inline-block;
-	widows: 142px;
-	height: 27px;
+	border: none;
+	padding-left: 17px;
+	padding-right: 17px;
+	padding-top: 4px;
+	padding-bottom: 4px;
 
+	text-decoration: none;
 	text-align: center;
 	font-size: 14px;
 	font-weight: bold;

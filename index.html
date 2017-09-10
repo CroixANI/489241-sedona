@@ -11,7 +11,7 @@
         <header class="page-header container">
             <nav class="main-navigation">
                 <ul class="site-navigation">
-                    <li><a href="index.html#intro">Информация</a></li>
+                    <li><a class="active" href="index.html#intro">Информация</a></li>
                     <li><a href="index.html">Фото и видео</a></li>
                     <li>
                         <a class="main-header-logo">
@@ -25,10 +25,10 @@
         </header>
         <section class="banner">
             <h1 class="visually-hidden">Седона</h1>
-            <img src="img/backgrounds/intro.jpg" width="1200" height="509" alt='Добро пожаловать в Седона'>
+            <img src="img/backgrounds/intro.jpg" width="1200" height="509" alt="Добро пожаловать в Седона">
         </section>
         <main class="container">
-            <section id="intro" class="intro">
+            <section class="intro" id="intro">
                 <h2>Седона - небольшой городок в Аризоне, заслуживающий большего!</h2>
                 <p>Рассмотрим 5 причин, по которым Седона круче, чем Гранд Каньон!</p>
             </section>
@@ -39,7 +39,7 @@
                     <p>Седона - не аттракцион для туристов, там течет своя жизнь.</p>
                 </div>
                 <div class="right-side">
-                    <img src="img/content/true-city.jpg" width="800" height="256" alt='Седона - фотографии'>
+                    <img src="img/content/true-city.jpg" width="800" height="256" alt="Седона - фотографии">
                 </div>
             </section>
             <section class="recommendations">
@@ -64,7 +64,7 @@
                     <p>Да, по нему можно пройти! Если конечно вы осмелитесь.</p>
                 </div>
                 <div class="right-side">
-                    <img src="img/content/devil-bridge.jpg" width="800" height="256" alt='Седона - фотографии'>
+                    <img src="img/content/devil-bridge.jpg" width="800" height="256" alt="Седона - фотографии">
                 </div>
             </section>
             <section class="features-list">
@@ -93,12 +93,12 @@
                     <form class="search-form" id="searchForm" action="https://echo.htmlacademy.ru" method="POST" hidden>
                         <div class="flex-row">
                             <label for="startDate">Дата заезда</label>
-                            <input type="text" name="startDate" placeholder="24 апреля 2017" class="calendar-icon">
+                            <input class="calendar-icon" id="startDate" type="text" name="startDate" placeholder="24 апреля 2017">
                             <button class="calendar">Открыть календарь</button>
                         </div>
                         <div class="flex-row">
                             <label for="endDate">Дата выезда</label>
-                            <input type="text" name="endDate" placeholder="4 июля 2017" class="calendar-icon">
+                            <input class="calendar-icon" id="endDate" type="text" name="endDate" placeholder="4 июля 2017">
                             <button class="calendar">Открыть календарь</button>
                         </div>
                         <div class="flex-row">
@@ -106,7 +106,7 @@
                                 <label for="adults">Взрослые</label>
                                 <div class="flex-row">
                                     <button type="button">-</button>
-                                    <input type="number" name="adults" value="1" min="1" max="1000" class="no-spin">
+                                    <input class="no-spin" id="adults" type="number" name="adults" value="1" min="1" max="1000">
                                     <button type="button">+</button>
                                 </div>
                             </div>
@@ -114,16 +114,16 @@
                                 <label for="children">Дети</label>
                                 <div class="flex-row">
                                     <button type="button">-</button>
-                                    <input type="number" name="children" value="0" min="0" max="1000" class="no-spin">
+                                    <input class="no-spin" id="children" type="number" name="children" value="0" min="0" max="1000">
                                     <button type="button">+</button>
                                 </div>
                             </div>
                         </div>
-                        <button type="submit" class="button-blue">Найти</button>
+                        <button class="button-blue" type="submit">Найти</button>
                     </form>
                 </div>
             </section>
-            <section id="map" class="map">
+            <section class="map" id="map">
                 <h2 class="visually-hidden">Карта</h2>
                 <img src="img/content/map.jpg" width="1200px" height="747px">
             </section>
@@ -136,7 +136,7 @@
             <div class="footer-social">
                 <ul>
                     <li>
-                        <a href="#" class="social-button">
+                        <a class="social-button" href="#">
                             <span class="visually-hidden">Твиттер</span>
                             <svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
                             width="17px" height="15px" viewBox="0 0 17 15" enable-background="new 0 0 17 15" xml:space="preserve">
@@ -155,7 +155,7 @@
                         </a>
                     </li>
                     <li>
-                        <a href="#" class="social-button">
+                        <a class="social-button" href="#">
                             <span class="visually-hidden">Фейсбук</span>
                             <svg version="1.1" id="Layer_2" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
                             width="12px" height="22px" viewBox="0 0 12 22" enable-background="new 0 0 12 22" xml:space="preserve">
@@ -164,7 +164,7 @@
                         </a>
                     </li>
                     <li>
-                        <a href="#" class="social-button">
+                        <a class="social-button" href="#">
                             <span class="visually-hidden">YouTube</span>
                             <svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
                             width="20px" height="16px" viewBox="0 0 20 16" enable-background="new 0 0 20 16" xml:space="preserve">
