@@ -40,22 +40,24 @@ a {
 
 a:hover,
 a:focus {
+	/* Типографика */
 	color: #81b3d2;
 }
 
 a:click {
+	/* Типографика */
 	color: #cacaca;
 }
 
-a:active,
-a.active {
-	color: #766357;
+a:active {
+	/* Типографика */
+	color: #cacaca;
 }
 
 p {
 	/* Блочная модель */
-	padding-top: 0;
 	margin: 0;
+	padding-top: 0;
 }
 
 .visually-hidden {
@@ -100,32 +102,42 @@ p {
 	line-height: 26px;
 }
 
+.site-navigation a.active {
+	/* Типографика */
+	color: #766357;
+}
+
 .main-header-logo {
+	/* Позиционирование */
 	position: relative;
 
+	/* Блочная модель */
 	height: 55px;
 	display: block;
 }
 
 .main-header-logo img {
+	/* Позиционирование */
 	position: absolute;
 	z-index: 2;
 	top: 0;
 	left: 0;
 	right: 0;
 
+	/* Блочная модель */
 	margin: 0 auto;
 }
 
 .intro {
+	/* Блочная модель */
 	padding: 55px;
 }
 
 .intro h2 {
 	/* Блочная модель */
-	padding-bottom: 30px;
-	margin: 0 auto;
 	max-width: 490px;
+	margin: 0 auto;
+	padding-bottom: 30px;
 
 	/* Типографика */
 	line-height: 26px;
@@ -150,16 +162,21 @@ p {
 }
 
 .feature img {
+	/* Блочная модель */
 	display: block;
-	padding: 0;
 	margin: 0;
+	padding: 0;
 }
 
 .feature h2 {
-	padding-bottom: 30px;
+	/* Блочная модель */
+	padding-bottom: 25px;
+	padding-left: 50px;
+	padding-right: 50px;
 }
 
 .feature p:first-of-type {
+	/* Блочная модель */
 	padding-bottom: 20px;
 }
 
@@ -169,7 +186,8 @@ p {
 }
 
 .left-side {
-	padding: 60px;
+	/* Блочная модель */
+	padding: 45px;
 }
 
 .recommendations {
@@ -227,6 +245,7 @@ p {
 }
 
 .recommendations .recommendations-item p:last-child {
+	/* Блочная модель */
 	padding-bottom: 80px;
 }
 
@@ -252,18 +271,17 @@ p {
 
 .features-list .features-item h3 {
 	/* Блочная модель */
+	margin: 0;
 	padding-left: 50px; 
 	padding-right: 50px;
 	padding-bottom: 20px;
-
-	/* Блочная модель */
-	margin: 0;
 
 	/* Типографика */
 	color: black;
 }
 
 .features-list .features-item p {
+	/* Блочная модель */
 	padding-bottom: 20px;
 }
 
@@ -337,9 +355,9 @@ p {
 	z-index: 2;
 
 	/* Блочная модель */
-	padding: 55px;
-	margin: 0 auto;
 	width: 458px;
+	margin: 0 auto;
+	padding: 55px;
 
 	/* Типографика */
 	text-align: left;
@@ -376,15 +394,15 @@ p {
 	/* Блочная модель */
 	width: 40px;
 	min-height: 40px;
-	border: none;
-	border-radius: 0px;
 
 	/* Типографика */
 	color: #a9a9a9;
 
 	/* Оформление */
-	outline: none;
+	border: none;
+	border-radius: 0px;
 	background-color: #f2f2f2;
+	outline: none;
 	cursor: pointer;
 }
 
@@ -415,9 +433,9 @@ p {
 	font: inherit;
 
 	/* Оформление */
-	outline: none;
-	border: none;
 	background-color: #f2f2f2;
+	border: none;
+	outline: none;
 }
 
 .hotels-search .search-form input:hover {
@@ -438,14 +456,14 @@ p {
 
 .map img {
 	display: block;
-	padding: 0;
 	margin: 0;
+	padding: 0;
 }
 
 .search-form .button-blue {
 	/* Блочная модель */
-	min-height: 58px;
 	width: 458px;
+	min-height: 58px;
 }
 
 .button-brown {
@@ -500,7 +518,7 @@ p {
 
 .hotels-filter {
 	/* Блочная модель */
-	padding: 32px;
+	padding: 28px;
 
 	/* Оформление */
 	background-image: url("../img/backgrounds/intro-blur.jpg");
@@ -514,8 +532,8 @@ p {
 	display: flex;
 	align-items: flex-start;
 	justify-content: space-between;
-	padding-left: 41px;
-	padding-right: 41px;
+	padding-left: 40px;
+	padding-right: 40px;
 
 	/* Типографика */
 	color: white;
@@ -538,7 +556,7 @@ p {
 .hotels-filter-form .infrastructure-filter h3,
 .hotels-filter-form .type-filter h3 {
 	/* Блочная модель */
-	padding-bottom: 30px; 
+	padding-bottom: 20px; 
 }
 
 .hotels-filter-form .range-filter-section {
@@ -561,13 +579,13 @@ p {
 .hotels-filter-form .range-filter-section .range-prices {
 	/* Блочная модель */
 	display: flex;
-	padding-top: 3px;
-	padding-bottom: 3px;
 	margin-bottom: 20px;
+	padding-top: 5px;
+	padding-bottom: 5px;
 
 	/* Оформление */
 	border: 2px solid white;
-	border-radius: 5px;
+	border-radius: 2px;
 }
 
 .hotels-filter-form .range-filter-section .range-prices div {
@@ -584,8 +602,8 @@ p {
 
 .hotels-filter-form ul {
 	/* Блочная модель */
-	padding: 0;
 	margin: 0;
+	padding: 0;
 
 	/* Типографика */
 	font-weight: normal;
@@ -596,7 +614,7 @@ p {
 }
 
 .hotels-filter-form ul li:not(:last-of-type) {
-	padding-bottom: 22px;
+	padding-bottom: 20px;
 }
 
 .hotels-filter-form .checkbox {
@@ -616,9 +634,9 @@ p {
 .hotels-filter-form .checkbox + label span {
 	/* Блочная модель */
 	display: inline-block;
-    vertical-align: middle;
-    width: 27px;
+	width: 27px;
 	height: 27px;
+    vertical-align: middle;
 	padding-right: 16px;
 
 	/* Оформление */
@@ -630,29 +648,46 @@ p {
 	background-image: url("../img/icons/checkbox-on.svg");
 }
 
+.range-filter-section .ui-slider-horizontal {
+    height: 0;
+}
+
 .range-filter-section .ui-slider .ui-slider-handle {
+	/* Позиционирование */
+    position:absolute;
+	top: -10px;
+	overflow: hidden; 
+
+	/* Блочная модель */
 	width:23px; 
     height:23px; 
+	
+	/* Оформление */
 	background:url("../img/icons/range-filter-button.svg") no-repeat; 
-	overflow: hidden; 
-    position:absolute;
-    top: -10px;
-    border-style:none; 
+	border-style:none; 
 }
 
 .range-filter-section .button-white {
-	border: 2px solid white;
-    background: none;
+	/* Блочная модель */
+	width: 140px;
+    padding-top: 8px;
+	padding-bottom: 8px;
+	
+	/* Типографика */
     color: white;
-    width: 133px;
-    padding-top: 10px;
-    padding-bottom: 10px;
-    border-radius: 5px;
+	
+	/* Оформление */
+	background: none;
+	border: 2px solid white;
+    border-radius: 2px;
 }
 
 .range-filter-section .button-white:hover, 
 .range-filter-section .button-white:focus {
+	/* Типографика */
 	color: black;
+
+	/* Оформление */
 	background-color: white;
 }
 
@@ -665,10 +700,12 @@ p {
 	padding-top: 30px;
 	padding-bottom: 30px;
 
+	/* Типографика */
 	text-transform: uppercase;
 }
 
 .hotels-sorting .total-column {
+	/* Типографика */
 	font-size: 21px;
 	line-height: 26px;
 	font-weight: bold;
@@ -684,12 +721,16 @@ p {
 }
 
 .hotels-sorting .hotels-sorting-form {
+	/* Блочная модель */
 	flex-grow: 1;
+
+	/* Типографика */
 	text-align: left;
 }
 
 .hotels-sorting .hotels-sorting-form .sort-title,
 .hotels-sorting .hotels-sorting-form .sort-types {
+	/* Типографика */
 	font-size: 12px;
 	line-height: 18px;
 }
@@ -697,6 +738,7 @@ p {
 .hotels-sorting .hotels-sorting-form,
 .hotels-result-item .details,
 .hotels-result-item .actions {
+	/* Блочная модель */
 	display: flex;
 	align-items: center;
 	justify-content: flex-start;
@@ -705,18 +747,52 @@ p {
 .hotels-sorting .sort-title,
 .hotels-result-item .details p:first-of-type,
 .hotels-result-item .actions a:first-of-type {
-	flex-basis: 107px;
+	/* Блочная модель */
+	flex-basis: 105px;
 	margin-right: 10px;
 }
 
+.hotels-sorting-form .sort-types .sort-button {
+	/* Блочная модель */
+	margin-right: 30px;
+}
+
+.hotels-sorting-form .sort-types .sort-button.active-button {
+	/* Типографика */
+	color: #95bed8;
+
+	/* Оформление */
+	border:none;
+}
+
+.hotels-sorting-form .sort-types .sort-button:hover,
+.hotels-sorting-form .sort-types .sort-button:focus {
+	/* Типографика */
+	color: #95bed8;
+
+	/* Оформление */
+	border-bottom: 1px dashed #95bed8;
+}
+
+.hotels-sorting-form .sort-types .sort-button:click {
+	/* Типографика */
+	color:black;
+
+	/* Оформление */
+	border: none;
+}
+
 .hotels-sorting .sort-direction {
+	/* Блочная модель */
 	display: flex;
 	flex-direction: row;
 	flex-grow: 1;
+	justify-content: flex-end;
 	padding-right: 73px;
 }
 
 .hotels-sorting .sort-direction .sort-button {
+	/* Блочная модель */
 	margin-left: 10px;
 }
 
@@ -724,54 +800,64 @@ p {
 	Took example here https://css-tricks.com/snippets/css/css-triangle/.
 */
 .hotels-sorting .up-arrow-button {
+	/* Блочная модель */
 	width: 0;
 	height: 0;
 
+	/* Типографика */
 	font-size: 0px;
 
+	/* Оформление */
 	border: none;
 	border-left: 5px solid transparent;
 	border-right: 5px solid transparent;
-	
 	border-bottom: 11px solid #cacaca;
 }
 
 .hotels-sorting .up-arrow-button.active {
+	/* Оформление */
 	border-bottom-color: #81b3d2;
 }
 
 .hotels-sorting .up-arrow-button:active {
+	/* Оформление */
 	border-bottom-color: #81b3d2;
 }
 
 .hotels-sorting .up-arrow-button:hover,
 .hotels-sorting .up-arrow-button:focus {
+	/* Оформление */
 	border-bottom-color: black;	
 }
 
 .hotels-sorting .down-arrow-button {
+	/* Блочная модель */
 	width: 0;
 	height: 0;
 
+	/* Типографика */
 	font-size: 0px;
 
+	/* Оформление */
 	border: none;
 	border-left: 5px solid transparent;
 	border-right: 5px solid transparent;
-	
 	border-top: 11px solid #cacaca;	
 }
 
 .hotels-sorting .down-arrow-button.active-button {
+	/* Оформление */
 	border-top-color: #81b3d2;	
 }
 
 .hotels-sorting .down-arrow-button:active {
+	/* Оформление */
 	border-top-color: #81b3d2;
 }
 
 .hotels-sorting .down-arrow-button:hover,
 .hotels-sorting .down-arrow-button:focus {
+	/* Оформление */
 	border-top-color: black;	
 }
 
@@ -793,29 +879,6 @@ p {
 	cursor: pointer;
 }
 
-.hotels-sorting-form .sort-types .sort-button {
-	margin-right: 33px;
-}
-
-.hotels-sorting-form .sort-types .sort-button.active-button {
-	color: #95bed8;
-
-	border:none;
-}
-
-.hotels-sorting-form .sort-types .sort-button:hover,
-.hotels-sorting-form .sort-types .sort-button:focus {
-	color: #95bed8;
-
-	border-bottom: 1px dashed #95bed8;
-}
-
-.hotels-sorting-form .sort-types .sort-button:click {
-	color:black;
-
-	border: none;
-}
-
 .hotels-result > ul {
 	/* Блочная модель */
 	padding: 0;
@@ -828,9 +891,10 @@ p {
 	display: flex;
 	align-items: stretch;
 	justify-content: flex-start;
-	padding-top: 30px;
-	padding-bottom: 30px;
-	padding-left: 72px;
+	padding-top: 29px;
+	padding-bottom: 29px;
+	padding-left: 73px;
+	padding-right: 73px;
 
 	/* Типографика */
 	text-align: left;
@@ -839,47 +903,79 @@ p {
 	border-top: 2px solid #e5e5e5;
 }
 
+.hotels-result .hotels-result-item img {
+	/* Блочная модель */
+	display: block;
+	margin: 0;
+	padding: 0;
+}
+
 .hotels-result .hotels-result-item:last-of-type {
 	/* Оформление */
 	border-bottom: 2px solid #e5e5e5;
 }
 
-.hotels-result-item h2 {
-	padding-bottom: 10px;
+.hotels-result-item .title {
+	/* Блочная модель */
+	display: block;
+
+	/* Типографика */
+	font-size: 21px;
+	font-weight: bold;
+	line-height: 26px;
 }
 
 .hotels-result-item .details {
-	padding-bottom: 10px;
+	/* Блочная модель */
+	padding-bottom: 17px;
 }
 
 .hotels-result-item .rating-column {
+	/* Блочная модель */
 	flex: 1;
 	display: flex;
 	flex-direction: column;
+	justify-content: space-between;
+	align-items: flex-end;
+
+	/* Типографика */
 	text-align: right;
-	align-content: space-between;
-	padding-right: 73px;
 }
 
 .hotels-result-item .rating-column .rating-info {
-	flex: 1;
+	/* Блочная модель */
+	width: 110px;
+    padding-top: 3px;
+    padding-bottom: 3px;
+	
+	/* Типографика */
+	text-align: center;
+	color: #666666;
+	
+	/* Оформление */
+	background-color: #f2f2f2;
 }
 
 .hotels-result .rating .glyphicon-star {
+	/* Блочная модель */
 	display: inline-block;
 	width: 18px;
 	height: 17px;
+
+	/* Оформление */
 	background-image: url("../img/icons/star-icon.svg");
 	background-repeat: no-repeat;
 }
 
 .hotels-result .button-blue {
+	/* Блочная модель */
 	border: none;
 	padding-left: 17px;
 	padding-right: 17px;
-	padding-top: 4px;
-	padding-bottom: 4px;
+	padding-top: 3px;
+	padding-bottom: 3px;
 
+	/* Типографика */
 	text-decoration: none;
 	text-align: center;
 	font-size: 14px;
@@ -888,12 +984,14 @@ p {
 }
 
 .hotels-result .button-brown {
+	/* Блочная модель */
 	border: none;
 	padding-left: 17px;
 	padding-right: 17px;
-	padding-top: 4px;
-	padding-bottom: 4px;
+	padding-top: 3px;
+	padding-bottom: 3px;
 
+	/* Типографика */
 	text-decoration: none;
 	text-align: center;
 	font-size: 14px;
@@ -902,6 +1000,7 @@ p {
 }
 
 .page-footer {
+	/* Блочная модель */
 	display: flex;
 	align-items: center;
 }
@@ -909,16 +1008,20 @@ p {
 .page-footer-overlay {
 	position: relative;
 	
+	/* Блочная модель */
 	margin-top: -116px;
 	
+	/* Оформление */
 	background: rgba(255, 255, 255, .5);
 }
 
 .page-footer > div {
+	/* Блочная модель */
 	width: 33%;
 }
 
 .footer-tag {
+	/* Типографика */
 	font-weight: bold;
 	font-size: 21px;
 }
@@ -941,6 +1044,7 @@ p {
 }
 
 .footer-social .social-button  {
+	/* Блочная модель */
 	display: flex;
 	align-items: center;
 	justify-content: center;
@@ -948,15 +1052,19 @@ p {
 	height: 46px;
 	margin-top: 35px;
 	margin-bottom: 35px;
+
+	/* Оформление */
 	background-color: #81b3d2;
 }
 
 .footer-social .social-button:hover,
 .footer-social .social-button:focus {
+	/* Оформление */
 	background-color: #669ec0;
 }
 
 .footer-social .social-button:active {
+	/* Оформление */
 	background-color: #5496bd;
 }
 
@@ -965,6 +1073,7 @@ p {
 }
 
 .footer-copyright {
+	/* Блочная модель */
 	display: flex;
 	align-items: center;
 	justify-content: center;

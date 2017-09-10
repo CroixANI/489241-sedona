@@ -7,7 +7,6 @@
         <link rel="stylesheet" href="css/normalize.css">
 		<link rel="stylesheet" href="css/styles.css">
 		<link rel="stylesheet" href="css/jquery.ui.css">
-		<link rel="stylesheet" href="css/jquery.ui.fix.css">
 		<script src="js/jquery.js"></script>
 		<script src="js/jquery.ui.js"></script>
 		<script>
@@ -36,7 +35,7 @@
 					<li><a href="index.html">Фото и видео</a></li>
 					<li>
 						<a class="main-header-logo">
-							<img src="img/site-icon-2.png" width="138" height="70" alt="Седона">
+							<img src="img/site-icon.png" width="138" height="70" alt="Седона">
 						</a>
 					</li>
 					<li><a href="index.html#map">Карта штата</a></li>
@@ -97,13 +96,11 @@
 			</section>
 			<section class="hotels-sorting">
 				<h2 class="visually-hidden">Способы сортировки</h2>
-				<p class="total-column">
-					Найдено <span class="total-counter">3</span>
-				</p>
+				<p class="total-column">Найдено: 3</p>
 				<form class="hotels-sorting-form" action="https://echo.htmlacademy.ru" method="GET">
 					<div class="sort-title">Сортировка:</div>
 					<div class="sort-types">
-						<button class="sort-button active" type="submit" name="price">По цене</button>
+						<button class="sort-button active-button" type="submit" name="price">По цене</button>
 						<button class="sort-button" type="submit" name="type">По типу</button>
 						<button class="sort-button" type="submit" name="rating">По рейтингу</button>
 					</div>
@@ -121,7 +118,7 @@
 								<img src="img/content/amara-resort.jpg" width="135" height="90" alt="Отель Amara Resort &and; SPA">
 						</div>
 						<div class="description-column">
-							<h2>Amara Resort &and; SPA</h2>
+							<a class="title" href="hotel-details.html">Amara Resort &amp; SPA</a>
 							<div class="details">
 								<p>Гостиница</p>
 								<p>от 4000р</p>
@@ -156,7 +153,7 @@
 							<img src="img/content/desert-quail.jpg" width="135" height="90" alt="Отель Desert Quail Inn">
 						</div>
 						<div class="description-column">
-							<h2>Desert Quail Inn</h2>
+							<a class="title" href="hotel-details.html">Desert Quail Inn</a>
 							
 							<div class="details">
 								<p>Мотель</p>
@@ -189,7 +186,7 @@
 							<img src="img/content/villas-at-poco.jpg" width="135" height="90" alt="Отель Villas Poco Diablo">
 						</div>
 						<div class="description-column">
-							<h2>Villas Poco Diablo</h2>
+							<a class="title" href="hotel-details.html">Villas at Poco Diablo</a>
 							<div class="details">
 								<p>Апартаменты</p>
 								<p>от 2000р</p>
