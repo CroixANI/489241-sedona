@@ -484,7 +484,7 @@ p {
 .button-blue:focus {
 	/* Типографика */
 	color: white;
-	
+
 	/* Оформление */
 	background-color: #669ec0;
 }
@@ -661,11 +661,10 @@ p {
 	align-items: center;
 	justify-content: flex-start;
 	padding-left: 72px;
+	padding-top: 30px;
+	padding-bottom: 30px;
 
 	text-transform: uppercase;
-
-	/* Временно. Для разметки */
-	height: 85px;
 }
 
 .hotels-sorting .total-column {
