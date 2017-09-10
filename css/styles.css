@@ -4,7 +4,7 @@ html, body {
 	padding: 0;
 
 	/* Типографика */
-	font-family: 'PT Sans', sans-serif;
+	font-family: 'PT Sans', "Tahoma", sans-serif;
 	font-size: 14px;
 	line-height: 21px;
 	font-weight: normal;
@@ -117,10 +117,13 @@ p {
 	margin: 0 auto;
 }
 
+.intro {
+	padding: 55px;
+}
+
 .intro h2 {
 	/* Блочная модель */
-	padding-top: 55px;
-	padding-bottom: 0px;
+	padding-bottom: 30px;
 	margin: 0 auto;
 	max-width: 490px;
 
@@ -130,15 +133,13 @@ p {
 
 .intro p {
 	/* Блочная модель */
-	padding-top: 30px;
-	padding-bottom: 50px;
 	margin: 0 auto;
 }
 
 .feature {
 	/* Блочная модель */
 	display: flex;
-	align-items: center;
+	align-items: stretch;
 
 	/* Типографика */
 	text-align: center;
@@ -154,8 +155,12 @@ p {
 	margin: 0;
 }
 
-.feature p {
-	padding-top: 32px;
+.feature h2 {
+	padding-bottom: 30px;
+}
+
+.feature p:first-of-type {
+	padding-bottom: 20px;
 }
 
 .feature.feature-reverse {
@@ -164,8 +169,7 @@ p {
 }
 
 .left-side {
-	padding-left: 60px;
-	padding-right: 60px;
+	padding: 60px;
 }
 
 .recommendations {
@@ -176,10 +180,8 @@ p {
 .recommendations .recommendations-item {
 	/* Блочная модель */
 	width: 33%;
-}
-
-.recommendations .recommendations-item p {
-	padding-top: 32px;
+	padding-left: 73px;
+    padding-right: 73px;
 }
 
 .recommendations .recommendations-item h3 {
@@ -187,7 +189,8 @@ p {
 	position: relative;
 
 	/* Блочная модель */
-	padding-top: 164px;
+	padding-top: 160px;
+	padding-bottom: 25px;
 }
 
 .recommendations .recommendations-item h3::before {
@@ -224,7 +227,7 @@ p {
 }
 
 .recommendations .recommendations-item p:last-child {
-	padding-bottom: 90px;
+	padding-bottom: 80px;
 }
 
 .features-list {
@@ -243,11 +246,15 @@ p {
 	width: 33%;
 	padding-left: 70px;
 	padding-right: 70px;
+	padding-top: 50px;
+	padding-bottom: 40px;
 }
 
 .features-list .features-item h3 {
 	/* Блочная модель */
-	padding-top: 50px; 
+	padding-left: 50px; 
+	padding-right: 50px;
+	padding-bottom: 20px;
 
 	/* Блочная модель */
 	margin: 0;
@@ -257,22 +264,21 @@ p {
 }
 
 .features-list .features-item p {
-	padding-top: 32px;
-}
-
-.features-list .features-item p:last-child {
-	padding-bottom: 65px;
+	padding-bottom: 20px;
 }
 
 .hotels-search {
+	/* Блочная модель */
+	padding-top: 50px;
+
 	/* Типографика */
 	text-align: center;
 }
 
 .hotels-search h2 {
 	/* Блочная модель */
-	padding-top: 60px;
 	margin: 0;
+	padding-bottom: 30px;
 
 	/* Типографика */
 	font-size: 30px;
@@ -291,14 +297,9 @@ p {
 	font-weight: normal;
 }
 
-.hotels-search > p:first-of-type {
-	/* Блочная модель */
-	padding-top: 40px;
-}
-
 .hotels-search > p:last-of-type {
 	/* Блочная модель */
-	padding-bottom: 55px;
+	padding-bottom: 40px;
 }
 
 .hotels-search button {
