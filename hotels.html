@@ -16,7 +16,7 @@
 				range: true,
 				min: 0,
 				max: 5000,
-				values: [ 0, 3000 ],
+				values: [ 0, 4000 ],
 				slide: function( event, ui ) {
 					$( "#minPrice" ).html("ОТ " + ui.values[ 0 ]);
 					$( "#maxPrice" ).html("ДО " + ui.values[ 1 ]);
@@ -109,7 +109,7 @@
 					</div>
 					<div class="sort-direction">
 						<button class="sort-button up-arrow-button" type="submit" name="ascending">По возрастанию</button>
-						<button class="sort-button down-arrow-button" type="submit" name="descending">По убыванию</button>
+						<button class="sort-button down-arrow-button active-button" type="submit" name="descending">По убыванию</button>
 					</div>
 				</form>
 			</section>

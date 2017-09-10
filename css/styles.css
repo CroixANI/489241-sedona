@@ -457,6 +457,9 @@ p {
 
 .button-brown:hover,
 .button-brown:focus {
+	/* Типографика */
+	color: white;
+
 	/* Оформление */
 	background-color: #604e43;
 }
@@ -479,6 +482,9 @@ p {
 
 .button-blue:hover,
 .button-blue:focus {
+	/* Типографика */
+	color: white;
+	
 	/* Оформление */
 	background-color: #669ec0;
 }
@@ -704,8 +710,69 @@ p {
 }
 
 .hotels-sorting .sort-direction {
+	display: flex;
+	flex-direction: row;
 	flex-grow: 1;
-	text-align: right;
+	padding-right: 73px;
+}
+
+.hotels-sorting .sort-direction .sort-button {
+	margin-left: 10px;
+}
+
+/*
+	Took example here https://css-tricks.com/snippets/css/css-triangle/.
+*/
+.hotels-sorting .up-arrow-button {
+	width: 0;
+	height: 0;
+
+	font-size: 0px;
+
+	border: none;
+	border-left: 5px solid transparent;
+	border-right: 5px solid transparent;
+	
+	border-bottom: 11px solid #cacaca;
+}
+
+.hotels-sorting .up-arrow-button.active {
+	border-bottom-color: #81b3d2;
+}
+
+.hotels-sorting .up-arrow-button:active {
+	border-bottom-color: #81b3d2;
+}
+
+.hotels-sorting .up-arrow-button:hover,
+.hotels-sorting .up-arrow-button:focus {
+	border-bottom-color: black;	
+}
+
+.hotels-sorting .down-arrow-button {
+	width: 0;
+	height: 0;
+
+	font-size: 0px;
+
+	border: none;
+	border-left: 5px solid transparent;
+	border-right: 5px solid transparent;
+	
+	border-top: 11px solid #cacaca;	
+}
+
+.hotels-sorting .down-arrow-button.active-button {
+	border-top-color: #81b3d2;	
+}
+
+.hotels-sorting .down-arrow-button:active {
+	border-top-color: #81b3d2;
+}
+
+.hotels-sorting .down-arrow-button:hover,
+.hotels-sorting .down-arrow-button:focus {
+	border-top-color: black;	
 }
 
 .hotels-sorting-form button {
@@ -730,7 +797,7 @@ p {
 	margin-right: 33px;
 }
 
-.hotels-sorting-form .sort-types .sort-button.active {
+.hotels-sorting-form .sort-types .sort-button.active-button {
 	color: #95bed8;
 
 	border:none;
@@ -785,16 +852,13 @@ p {
 	padding-bottom: 10px;
 }
 
-
-
-
-
 .hotels-result-item .rating-column {
 	flex: 1;
 	display: flex;
 	flex-direction: column;
 	text-align: right;
 	align-content: space-between;
+	padding-right: 73px;
 }
 
 .hotels-result-item .rating-column .rating-info {
