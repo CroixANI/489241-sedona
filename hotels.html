@@ -7,25 +7,6 @@
         <link rel="stylesheet" href="css/normalize.css">
 		<link rel="stylesheet" href="css/styles.css">
 		<link rel="stylesheet" href="css/jquery.ui.css">
-		<script src="js/jquery.js"></script>
-		<script src="js/jquery.ui.js"></script>
-		<script>
-		$( function() {
-			$( "#rangeSlider" ).slider({
-				range: true,
-				min: 0,
-				max: 5000,
-				values: [ 0, 4000 ],
-				slide: function( event, ui ) {
-					$( "#minPrice" ).html("ОТ " + ui.values[ 0 ]);
-					$( "#maxPrice" ).html("ДО " + ui.values[ 1 ]);
-				}
-			});
-			
-			$( "#minPrice" ).html("ОТ " + $( "#rangeSlider" ).slider( "values", 0 ));
-			$( "#maxPrice" ).html("ДО " + $( "#rangeSlider" ).slider( "values", 1 ));
-		} );
-		</script>
     </head>
     <body>
 		<header class="page-header container">
@@ -268,5 +249,24 @@
 				</a>
 			</div>
 		</footer>
+		<script src="js/jquery.js"></script>
+		<script src="js/jquery.ui.js"></script>
+		<script>
+		$( function() {
+			$( "#rangeSlider" ).slider({
+				range: true,
+				min: 0,
+				max: 5000,
+				values: [ 0, 4000 ],
+				slide: function( event, ui ) {
+					$( "#minPrice" ).html("ОТ " + ui.values[ 0 ]);
+					$( "#maxPrice" ).html("ДО " + ui.values[ 1 ]);
+				}
+			});
+			
+			$( "#minPrice" ).html("ОТ " + $( "#rangeSlider" ).slider( "values", 0 ));
+			$( "#maxPrice" ).html("ДО " + $( "#rangeSlider" ).slider( "values", 1 ));
+		} );
+		</script>
 	</body>
 </html>

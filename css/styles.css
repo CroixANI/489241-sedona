@@ -16,12 +16,6 @@ html, body {
 	background-color: white;
 }
 
-/* body {
-	background-image: url("../img/backgrounds/sedona-index-1200.jpg");
-	background-position: top center;
-	background-repeat: no-repeat;
-} */
-
 h2, h3 {
 	/* Блочная модель */
 	margin: 0;
@@ -195,14 +189,14 @@ p {
 	display: flex;
 }
 
-.recommendations .recommendations-item {
+.recommendations-item {
 	/* Блочная модель */
 	width: 33%;
 	padding-left: 73px;
     padding-right: 73px;
 }
 
-.recommendations .recommendations-item h3 {
+.recommendations-item h3 {
 	/* Позиционирование */
 	position: relative;
 
@@ -211,7 +205,7 @@ p {
 	padding-bottom: 25px;
 }
 
-.recommendations .recommendations-item h3::before {
+.recommendations-item h3::before {
 	content: "";
 
 	/* Позиционирование */
@@ -229,22 +223,22 @@ p {
 	background-repeat: no-repeat;
 }
 
-.recommendations .recommendations-item.house h3::before {
+.house h3::before {
 	/* Оформление */
 	background-image: url("../img/icons/house.svg");
 }
 
-.recommendations .recommendations-item.food h3::before {
+.food h3::before {
 	/* Оформление */
 	background-image: url("../img/icons/food.svg");
 }
 
-.recommendations .recommendations-item.souvenirs h3::before {
+.souvenirs h3::before {
 	/* Оформление */
 	background-image: url("../img/icons/souvenirs.svg");
 }
 
-.recommendations .recommendations-item p:last-child {
+.recommendations-item p:last-child {
 	/* Блочная модель */
 	padding-bottom: 80px;
 }
@@ -260,7 +254,7 @@ p {
 	background-color: #eeeeee;
 }
 
-.features-list .features-item {
+.features-item {
 	/* Блочная модель */
 	width: 33%;
 	padding-left: 70px;
@@ -269,7 +263,7 @@ p {
 	padding-bottom: 40px;
 }
 
-.features-list .features-item h3 {
+.features-item h3 {
 	/* Блочная модель */
 	margin: 0;
 	padding-left: 50px; 
@@ -280,7 +274,7 @@ p {
 	color: black;
 }
 
-.features-list .features-item p {
+.features-item p {
 	/* Блочная модель */
 	padding-bottom: 20px;
 }
@@ -367,7 +361,7 @@ p {
 	background-color: white;
 }
 
-.hotels-search .search-form .flex-row {
+.search-form .flex-row {
 	/* Блочная модель */
 	display: flex;
 	flex-wrap: nowrap;
@@ -375,25 +369,25 @@ p {
 	justify-content: flex-end;
 }
 
-.hotels-search .search-form > .flex-row {
+.search-form > .flex-row {
 	/* Блочная модель */
 	padding-bottom: 30px;
 }
 
-.hotels-search .search-form > .flex-row:last-of-type {
+.search-form > .flex-row:last-of-type {
 	/* Блочная модель */
 	padding-bottom: 55px;
 }
 
-.hotels-search .search-form .flex-row.half-width {
+.search-form .flex-row.half-width {
 	/* Блочная модель */
 	width: 50%;
 }
 
-.hotels-search .search-form button:not(.button-blue) {
+.search-form .flex-row button {
 	/* Блочная модель */
-	width: 40px;
-	min-height: 40px;
+	width: 38px;
+	min-height: 38px;
 
 	/* Типографика */
 	color: #a9a9a9;
@@ -406,17 +400,27 @@ p {
 	cursor: pointer;
 }
 
-.hotels-search .search-form .calendar {
+.search-form .calendar {
 	/* Типографика */
 	font-size: 0;
-
-	/* Оформление */
-	background-image: url("../img/icons/calendar.svg");
-	background-repeat: no-repeat;
-	background-position: 50% 50%;
 }
 
-.hotels-search .search-form .half-width input {
+.calendar svg {
+	fill: #cacaca;
+
+	vertical-align: middle;
+}
+
+.calendar:hover svg,
+.calendar:focus svg {
+	fill: black;
+}
+
+.calendar:active svg {
+	fill: #81b3d2;
+}
+
+.half-width input {
 	/* Блочная модель */
 	width: 40px;
 
@@ -424,13 +428,18 @@ p {
 	text-align: center;
 }
 
-.hotels-search .search-form input {
-	/* Блочная модель */
-	width: 306px;
-	height: 38px;
+.half-width button:hover,
+.half-width button:focus {
+	color: black;
+}
 
-	/* Типографика */
-	font: inherit;
+.half-width button:active {
+	color: #81b3d2;
+}
+
+.search-form input {
+	/* Блочная модель */
+	height: 36px;
 
 	/* Оформление */
 	background-color: #f2f2f2;
@@ -438,12 +447,26 @@ p {
 	outline: none;
 }
 
-.hotels-search .search-form input:hover {
+.calendar-input {
+	/* Блочная модель */
+	width: 280px;
+	padding-left: 12px;
+	padding-right: 12px;
+
+	/* Типографика */
+	font: inherit;
+	text-transform: uppercase;	
+}
+
+.search-form input:hover,
+.search-form .calendar-input:hover + .calendar svg {
 	/* Оформление */
 	background-color: #ebebeb;
 }
 
-.hotels-search .search-form input:focus {
+.search-form input:focus {
+	height: 32px;
+
 	/* Оформление */
 	background-color: white;
 	border: 2px solid #e5e5e5;
@@ -451,7 +474,18 @@ p {
 }
 
 .hotels-search .search-form label {
-	padding-right: 20px;
+	flex-basis: 112px;
+}
+
+.hotels-search .search-form .half-width:last-of-type label {
+	text-align: right;
+	padding-right: 25px;
+}
+
+.no-spin::-webkit-inner-spin-button, .no-spin::-webkit-outer-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+    -moz-appearance:textfield;
 }
 
 .map img {
