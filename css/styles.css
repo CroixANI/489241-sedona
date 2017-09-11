@@ -38,11 +38,6 @@ a:focus {
 	color: #81b3d2;
 }
 
-a:click {
-	/* Типографика */
-	color: #cacaca;
-}
-
 a:active {
 	/* Типографика */
 	color: #cacaca;
