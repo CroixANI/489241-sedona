@@ -589,47 +589,6 @@ p {
 	padding-bottom: 20px; 
 }
 
-.hotels-filter-form .range-filter-section {
-	/* Блочная модель */
-	flex-basis: 310px;
-	margin-left: auto;
-
-	/* Типографика */
-	text-align: center;
-}
-
-.hotels-filter-form .range-filter-section h3 {
-	/* Блочная модель */
-	margin-bottom: 10px;
-
-	/* Типографика */
-	text-align: left;
-}
-
-.hotels-filter-form .range-filter-section .range-prices {
-	/* Блочная модель */
-	display: flex;
-	margin-bottom: 20px;
-	padding-top: 5px;
-	padding-bottom: 5px;
-
-	/* Оформление */
-	border: 2px solid white;
-	border-radius: 2px;
-}
-
-.hotels-filter-form .range-filter-section .range-prices div {
-	flex: 1 1;
-}
-
-.hotels-filter-form .range-filter-section .range-prices div:last-child {
-	border-left: 2px solid white;
-}
-
-.hotels-filter-form .range-filter-section .ui-slider {
-	margin-bottom: 30px;
-}
-
 .hotels-filter-form ul {
 	/* Блочная модель */
 	margin: 0;
@@ -683,7 +642,71 @@ p {
     height: 0;
 }
 
-.range-filter-section .ui-slider .ui-slider-handle {
+.hotels-filter-form .range-filter-section {
+	/* Блочная модель */
+	flex-basis: 310px;
+	margin-left: auto;
+
+	/* Типографика */
+	text-align: center;
+}
+
+.range-filter-section h3 {
+	/* Блочная модель */
+	margin-bottom: 10px;
+
+	/* Типографика */
+	text-align: left;
+}
+
+.range-filter-section .range-prices {
+	/* Блочная модель */
+	display: flex;
+	margin-bottom: 20px;
+	padding-top: 5px;
+	padding-bottom: 5px;
+
+	/* Оформление */
+	border: 2px solid white;
+	border-radius: 2px;
+}
+
+.range-filter-section .range-prices div {
+	flex: 1 1;
+}
+
+.range-filter-section .range-prices div:last-child {
+	border-left: 2px solid white;
+}
+
+.range-filter-section .range-slider {
+	/* Позиционирование */
+	position: relative;
+
+	/* Блочная модель */
+	height: 0px;
+	margin-bottom: 30px;
+
+	/* Оформление */
+	border: 1px solid #767577;
+	border-radius: 3px;
+}
+
+.range-slider .slider-line {
+	/* Позиционирование */
+	position: absolute;
+	left: 10px;
+	top: 0;
+
+	width: 80%;
+	height: 100%;
+
+	/* Оформление */
+	border: 1px solid white;
+	border-radius: 3px;
+}
+
+.range-slider .slider-handle {
 	/* Позиционирование */
     position:absolute;
 	top: -10px;
@@ -698,11 +721,22 @@ p {
 	background-repeat: no-repeat;
 	background-size: 100% 100%;
 	background-color: transparent;
-	border-style:none; 
+	border-style:none;
+	cursor: pointer;
 }
 
-.range-filter-section .ui-slider .ui-slider-handle:hover,
-.range-filter-section .ui-slider .ui-slider-handle:focus {
+.range-slider .left-handle {
+	/* Позиционирование */
+	left: 0;
+}
+
+.range-slider .right-handle {
+	/* Позиционирование */
+	left: 80%;
+}
+
+.range-slider .slider-handle:hover,
+.range-slider .slider-handle:focus {
 	/* Блочная модель */
 	width:22px; 
     height:24px; 
